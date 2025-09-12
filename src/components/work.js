@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Play, Eye, Star, TrendingUp, Users, Award } from 'lucide-react';
-import Workfeedback from './workfeedback';
-import Worksection from './worksection'
+
 
 import img1 from '../Sliderimgs/1mQzxqU39L2myWBpVjaXqeZy3TE.avif';
 import img2 from '../Sliderimgs/7Ha24BXvRcKraCXO63AfzEkdg.avif';
@@ -89,7 +88,7 @@ const ModernSuccessShowcase = () => {
     const duplicatedImages = [...images, ...images, ...images];
   
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-950 via-purple-900 to-indigo-950 text-white relative overflow-hidden pt-16 sm:pt-20 md:pt-16 lg:pt-14">
+      <div className="min-h-screen text-white relative overflow-hidden pt-16 sm:pt-20 md:pt-16 lg:pt-14">
         {/* Enhanced Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-32 -right-32 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-purple-500/30 rounded-full blur-3xl animate-float-1"></div>
@@ -109,7 +108,7 @@ const ModernSuccessShowcase = () => {
           {/* Header */}
           <div className={`text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-block mb-3 sm:mb-4 md:mb-6">
-              <div className="flex items-center gap-1.5 sm:gap-2 bg-purple-500/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-purple-400/30 animate-glow">
+              <div className="flex items-center gap-1.5 mt-5 sm:gap-2 bg-purple-500/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-purple-400/30 animate-glow">
                 <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current animate-twinkle" />
                 <span className="text-purple-200 text-xs sm:text-sm font-medium">Success Stories</span>
               </div>
@@ -365,9 +364,6 @@ const ModernSuccessShowcase = () => {
             }
           }
         `}</style>
-      <Worksection/>
-      <Workfeedback/>
-
     </div>
   );
 };

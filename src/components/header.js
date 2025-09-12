@@ -172,9 +172,7 @@ export default function ContentMarketingLanding() {
           <div className="flex items-center justify-center gap-3 mb-12 relative z-10 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <span className="text-purple-900 font-semibold text-lg">Excellent</span>
             <div className="flex gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-purple-500 text-purple-500 animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
-              ))}
+              <img src='/stars.avif' className='h-4'/>
             </div>
             <span className="text-purple-700 font-semibold">600+ Reviews</span>
           </div>

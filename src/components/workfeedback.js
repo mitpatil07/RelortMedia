@@ -3,7 +3,7 @@ import { Star, ChevronLeft, ChevronRight, Users, Award, TrendingUp } from 'lucid
 
 const ReviewsComponent = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  
+
   const reviews = [
     {
       id: 1,
@@ -119,24 +119,22 @@ const ReviewsComponent = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 py-12 px-4">
+    <div className="min-h-screen py-12 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
             <Award className="w-5 h-5 text-yellow-400 mr-2" />
             <span className="text-white font-medium">Excellent</span>
-            <div className="flex ml-3">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              ))}
+            <div className="flex gap-1">
+              <img src='/stars.avif' className='h-4 ml-2' />
             </div>
           </div>
-          
+
           <h1 className="text-5xl font-bold text-white mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
             What Our Community Says
           </h1>
-          
+
           <div className="flex justify-center items-center space-x-8 text-white/80 text-lg">
             <div className="flex items-center">
               <span className="text-3xl font-bold text-yellow-400 mr-2">4.9</span>
@@ -170,13 +168,12 @@ const ReviewsComponent = () => {
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
                     <h3 className="font-semibold text-white">{review.name}</h3>
-                    {review.verified && (
-                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                        <Star className="w-3 h-3 text-white fill-white" />
-                      </div>
-                    )}
                   </div>
-                  <StarRating rating={review.rating} />
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-green-400 fill-current" />
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -188,9 +185,6 @@ const ReviewsComponent = () => {
                 <p className="text-white/80 leading-relaxed">
                   {review.content}
                 </p>
-                <button className="text-purple-300 hover:text-purple-200 text-sm mt-3 font-medium transition-colors duration-200">
-                  Read more
-                </button>
               </div>
             </div>
           ))}
@@ -204,21 +198,20 @@ const ReviewsComponent = () => {
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
-          
+
           <div className="flex space-x-2">
             {[...Array(totalPages)].map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentPage(i)}
-                className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                  i === currentPage 
-                    ? 'bg-purple-400 scale-125' 
+                className={`w-3 h-3 rounded-full transition-all duration-200 ${i === currentPage
+                    ? 'bg-purple-400 scale-125'
                     : 'bg-white/30 hover:bg-white/50'
-                }`}
+                  }`}
               />
             ))}
           </div>
-          
+
           <button
             onClick={nextPage}
             className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-white/20 transition-all duration-200 hover:scale-110"

@@ -64,13 +64,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out ${
-        scrolled 
+<nav className={`fixed top-5 left-4 right-4 sm:left-6 sm:right-6 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:w-[90%] mx-auto z-50 transition-all duration-500 ease-out rounded-2xl bg-white shadow-lg ${
+scrolled 
           ? 'bg-gray-900/95 backdrop-blur-xl shadow-2xl border-b border-white/10' 
           : 'bg-gray-900'
       }`} style={{ backgroundColor: scrolled ? 'rgba(20, 20, 20, 0.95)' : '#141414' }}>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-1">
+        <div className="px-4 sm:px-6 lg:px-8 p-1">
           <div className="flex justify-between items-center h-16">
             {/* Enhanced Logo */}
             <div className="flex-shrink-0 flex items-center group cursor-pointer">
@@ -80,18 +80,18 @@ const Navbar = () => {
                     <img 
                       src="/logo.png" 
                       alt="Logo" 
-                      className="w-15  relative z-10 transition-transform duration-300 group-hover:scale-2" 
+                      className="w-10 h-10 ml-10 sm:w-12 sm:h-12 lg:w-15 lg:h-15 relative z-10 transition-transform duration-300 group-hover:scale-110" 
                     />
 
                 </div>
                 <div className="hidden sm:block">
-                  <div className="h-0.5 w-12 bg-gradient-to-r from-purple-500 to-transparent group-hover:from-purple-400 transition-all duration-300"></div>
+                  <div className="h-0.5 w-8 sm:w-12 bg-gradient-to-r from-purple-500 to-transparent group-hover:from-purple-400 transition-all duration-300"></div>
                 </div>
               </Link>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-1">
               {/* Home */}
               <Link 
                 to="/" 
@@ -228,12 +228,13 @@ const Navbar = () => {
             <div className="hidden md:flex items-center space-x-4">
               <button 
                 onClick={handleStartTesting}
-                className="relative px-6 py-2.5 rounded-xl text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 group overflow-hidden"
+                className="relative px-4 lg:px-6 py-2.5 rounded-xl text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 group overflow-hidden"
                 style={{ backgroundColor: '#9112BC' }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <span className="relative z-10 flex items-center space-x-2">
-                  <span>Start Testing</span>
+                  <span className="hidden lg:inline">Start Testing</span>
+                  <span className="lg:hidden">Start</span>
                   <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </button>
@@ -371,8 +372,6 @@ const Navbar = () => {
         </div>
       </nav>
       
-      {/* Spacer to prevent content from hiding behind fixed navbar */}
-      <div className="h-5"></div>
     </>
   );
 };

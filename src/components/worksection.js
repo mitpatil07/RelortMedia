@@ -234,12 +234,7 @@ const PurpleCaseStudies = () => {
                       <Eye className="w-4 h-4 text-white" />
                       <span className="text-white font-semibold">{video.views}</span>
                     </div>
-                    
-                    {video.isPinned && (
-                      <div className="absolute top-3 left-3 bg-purple-500 px-2 py-1 rounded-full text-white text-xs font-semibold">
-                        Pinned
-                      </div>
-                    )}
+                  
                   </div>
                   
                   <div className="p-4">
@@ -292,7 +287,7 @@ const PurpleCaseStudies = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-purple-900 to-indigo-950 relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>

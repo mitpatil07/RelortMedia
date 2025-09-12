@@ -11,7 +11,7 @@ import AboutUs from './components/aboutus';
 import ContactUs from './components/cantactus';
 import Career from './components/carrear';
 import FreeTraining from './components/freetraning';
-import Work from './components/work';
+import Work from './components/ourwork';
 // import GetStart from './components/getstart';
 import ScrollToTop from "./components/webfun/ScrollToTop"; 
 
