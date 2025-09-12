@@ -9,46 +9,58 @@ const ReviewsComponent = () => {
       name: "Dave Polykoff",
       date: "Jul 16, 2025",
       title: "Amazing strategies around content conversion",
-      content: "I've been using Viral Coach's content strategies for about a year now and I love how simple and effective they are. The way they approach content creation and then converting that content into clients for my brand is incredible. Highly recommend.",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      name: "James Zheng",
-      date: "Jul 15, 2025",
-      title: "Confused Network Marketer - Now Empowered",
-      content: "As a business professional with 16 years of experience, much of that spent in the online space, I've spent countless hours scouring the internet for every possible hack, tool, and strategy to grow organically on social media. I've studied algorithms, tested trends, and tried nearly every \"proven\" system out there. The problem? Most of what I found felt out of alignment. It was either inconsistent, dependent on paid ads, or constantly chasing the latest trend...none of which felt sustainable or authentic to me. What I've loved most about Viral Coach is that their content actually works because it's built on real, proven experience. It's not gimmicky, trend-chasing fluff. It's evergreen, value-driven content from mentors who've been in the trenches and know how to build true authority online.",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      content: "I've been using Viral Coach's content strategies for about a year now and I love how simple and effective they are. The way they approach content creation and then converting that content into clients for my brand is incredible. Highly recommend."
     },
     {
       name: "Katie Frederickson",
       date: "Mar 18, 2025",
       title: "Totally worth it!",
-      content: "Just started using Viral Coach to jumpstart my business and I'm blown away by how much information I've already gained access to! Excited to put it all to work and grow with their support!",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+      content: "Just started using Viral Coach to jumpstart my business and I'm blown away by how much information I've already gained access to! Excited to put it all to work and grow with their support!"
     },
     {
       name: "Brandon True",
-      date: "Feb 7 2025",
+      date: "Feb 7, 2025",
       title: "Fantastic Team",
-      content: "Danny and his team are a CLASS ACT. Danny was a super early adopter of short-form content - I first discovered him early on when TikTok was on the come up. He built a following and leveraged it HARD to build an amazing network. Now, he and his team are genuinely fantastic at executing your content strategy. No agency branding and culture BS. What are your sales goals? Let's get you there.",
-      avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
+      content: "Danny and his team are a CLASS ACT. Danny was a super early adopter of short-form content - I first discovered him early on when TikTok was on the come up. He built a following and leveraged it HARD to build an amazing network. Now, he and his team are genuinely fantastic at executing your content strategy. No agency branding and culture BS. What are your sales goals? Let's get you there."
+    },
+    {
+      name: "James Zheng",
+      date: "Jul 15, 2025",
+      title: "Confused Network Marketer - Now Empowered",
+      content: "As a business professional with 16 years of experience, much of that spent in the online space, I've spent countless hours scouring the internet for every possible hack, tool, and strategy to grow organically on social media. I've studied algorithms, tested trends, and tried nearly every “proven” system out there. The problem? Most of what I found felt out of alignment. It was either inconsistent, dependent on paid ads, or constantly chasing the latest trend...none of which felt sustainable or authentic to me. What I’ve loved most about Viral Coach is that their content actually works because it's built on real, proven experience. It's not gimmicky, trend-chasing fluff. It's evergreen, value-driven content from mentors who've been in the trenches and know how to build true authority online. The coaching, the community, and the strategy have all been world-class. I'm already implementing what I've learned and for the first time in a long time, I feel excited, aligned, and confident about how I'm showing up on social media. Highly recommend."
     },
     {
       name: "Lynnette Jaiswal",
       date: "Mar 16, 2025",
       title: "Streamlined and Helpful",
-      content: "I just started using Viral Coach and I'm already so impressed by how helpful and streamlined everything is. As someone who wears multiple hats in my business, having a platform that brings clarity, structure, and proven strategies all in one place has been a game changer.",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      content: "I just started using Viral Coach and I'm already so impressed by how helpful and streamlined everything is. As someone who wears multiple hats in my business, having a platform that brings clarity, structure, and strategy to my social media presence is a total game changer. The content prompts, branding insights, and step-by-step guidance are not only helpful—they're empowering. I feel like I finally have a system that aligns with my voice and vision. Can't wait to see the momentum that builds from here. If you're just getting started or want to bring intention to your online presence, this is 100% worth it."
     },
     {
       name: "Adrian Alexander",
-      date: "Jan 22, 2025",
-      title: "Exceeded Expectations",
-      content: "The coaching, the community, and the strategy have all been world-class. I'm already implementing what I've learned and for the first time in a long time, I feel excited, aligned, and confident about how I'm showing up on social media. Highly recommend.",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+      date: "Feb 16, 2025",
+      title: "The viral coach has provided me 10x the…",
+      content: "The viral coach has provided me 10x the skills and clarity to create powerful content that speaks directly to my target audience. I could not imagine the growth would be at this stage. Its safe to say I am very happy."
+    },
+    {
+      name: "Karen Cedeno",
+      date: "Apr 12, 2025",
+      title: "A very insightful and high quality experience",
+      content: "This has been a very insightful experience so far. You can tell they have done much work to simplify years of knowledge into easy-to-digest, easy-to-implement material with real-life examples. Different from other “gurus” and courses, this doesn’t feel like the typical BS of “de-coding algorithms”. Instead - They take us back to the foundation of sales and marketing ~ psychology. So glad to start this journey!"
+    },
+    {
+      name: "Mike Brady",
+      date: "Apr 6, 2025",
+      title: "Highly recommend",
+      content: "Thomas and Viral Coach are awesome! After our first meeting, I made a few changes to my content and had more people respond in one day than had responded in the last month. Highly recommend."
+    },
+    {
+      name: "Marcus Adams",
+      date: "Feb 19, 2025",
+      title: "Eye-opening organic strategy",
+      content: "I've always thought 'paid ads are king'. But after learning Viral Coach's strategy around organic content it’s been a complete eye-opener. Free leads + Smoother sales process + Better clients = NO BRAINER. I wasn’t too sure about this at first because I’ve tried organic content in the past with no success - But this really broadened my understanding of how to actually make content work for my business."
     }
   ];
-
+  
   useEffect(() => {
     setIsVisible(true);
   }, []);

@@ -12,7 +12,7 @@ import ContactUs from './components/cantactus';
 import Career from './components/carrear';
 import FreeTraining from './components/freetraning';
 import Work from './components/ourwork';
-// import GetStart from './components/getstart';
+import GetStart from './components/getstart';
 import ScrollToTop from "./components/webfun/ScrollToTop"; 
 
 // Optional: 404 Not Found Component
@@ -54,7 +54,7 @@ function App() {
             {/* Main Pages */}
             <Route path="/" element={<Home />} />
             <Route path="/work" element={<Work />} />
-            {/* <Route path="/get-started" element={<GetStart />} /> */}
+            <Route path="/get-started" element={<GetStart />} />
 
             {/* Company Pages */}
             <Route path="/about" element={<AboutUs />} />

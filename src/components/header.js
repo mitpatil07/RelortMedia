@@ -1,6 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, Star, Volume2, Maximize, MoreHorizontal } from 'lucide-react';
+
 import img1 from '../sliderlogos/1.avif';
 import img2 from '../sliderlogos/2.avif';
 import img3 from '../sliderlogos/amazon.avif';
@@ -178,19 +179,15 @@ export default function ContentMarketingLanding() {
           </div>
 
           {/* Video Testimonial Card */}
-          <div className="relative max-w-4xl mx-auto mb-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <div className="bg-white rounded-3xl shadow-2xl border-4 border-purple-300 relative overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
-              {/* Video Container */}
-              <div className="relative bg-gradient-to-r from-purple-100 via-pink-50 to-orange-100">
-                <div className="flex items-start p-8 pb-4">
+          <div className="relative max-w-4xl mx-auto mb-12">
+            <div className="bg-gradient-to-br from-yellow-400 via-orange-400 to-yellow-500 rounded-3xl p-1 shadow-2xl">
+              <div className="bg-white rounded-3xl overflow-hidden">
+                {/* Video Content */}
+                <div className="flex items-start ">
 
-                  {/* Video Player */}
-                  <div className="relative">
-                    <div
-                      className="w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-black relative group cursor-pointer"
-                      onMouseEnter={() => setShowControls(true)}
-                      onMouseLeave={() => setShowControls(true)}
-                    >
+                  {/* Right Side - Video Player */}
+                  <div>
+                    <div className="relative w-full h-full overflow-hidden bg-black group cursor-pointer shadow-2xl border-4 border-gray-200">
                       {/* Actual Video */}
                       <video
                         ref={videoRef}
@@ -200,81 +197,45 @@ export default function ContentMarketingLanding() {
                         preload="metadata"
                       />
 
-                      {/* Play/Pause Overlay */}
-                      {!isPlaying && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
-                          <button
-                            onClick={togglePlay}
-                            className="w-20 h-20 bg-white bg-opacity-90 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-opacity-100 transition-all duration-300 hover:scale-110 shadow-2xl animate-pulse"
-                          >
-                            <Play className="w-10 h-10 text-purple-600 ml-2" fill="currentColor" />
-                          </button>
+                      {/* Play Button Overlay */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <button
+                          onClick={togglePlay}
+                          className={`w-20 h-20 bg-white bg-opacity-90 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-opacity-100 transition-all duration-300 hover:scale-110 shadow-2xl ${!isPlaying ? 'animate-pulse' : 'opacity-0'}`}
+                        >
+                          <Play className="w-10 h-10 text-gray-800 ml-2" fill="currentColor" />
+                        </button>
+                      </div>
+
+                      {/* Video Controls */}
+                      {isPlaying && (
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                          <div className="flex items-center gap-2">
+                            <button
+                              onClick={togglePlay}
+                              className="w-6 h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all"
+                            >
+                              <Pause className="w-3 h-3 text-white" fill="currentColor" />
+                            </button>
+                            
+                            <div
+                              ref={progressRef}
+                              className="flex-1 h-1 bg-gray-600 rounded-full overflow-hidden cursor-pointer"
+                              onClick={handleProgressClick}
+                            >
+                              <div
+                                className="h-full bg-white rounded-full transition-all duration-100"
+                                style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}
+                              ></div>
+                            </div>
+
+                            <span className="text-white text-xs font-mono">
+                              {formatTime(currentTime)} / {formatTime(duration)}
+                            </span>
+                          </div>
                         </div>
                       )}
                     </div>
-                  </div>
-                </div>
-
-                {/* Video Controls */}
-                <div className={`bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 px-8 py-4 transition-all duration-300 ${showControls ? 'opacity-100' : 'opacity-80'}`}>
-                  <div className="flex items-center gap-4">
-                    {/* Play/Pause Button */}
-                    <button
-                      onClick={togglePlay}
-                      className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all"
-                    >
-                      {isPlaying ? (
-                        <Pause className="w-4 h-4 text-white" fill="currentColor" />
-                      ) : (
-                        <Play className="w-4 h-4 text-white ml-0.5" fill="currentColor" />
-                      )}
-                    </button>
-
-                    {/* Time Display */}
-                    <span className="text-white text-sm font-mono min-w-[80px]">
-                      {formatTime(currentTime)} / {formatTime(duration)}
-                    </span>
-
-                    {/* Progress Bar */}
-                    <div
-                      ref={progressRef}
-                      className="flex-1 h-2 bg-gray-600 rounded-full overflow-hidden cursor-pointer hover:h-3 transition-all"
-                      onClick={handleProgressClick}
-                    >
-                      <div
-                        className="h-full bg-purple-500 rounded-full transition-all duration-100"
-                        style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}
-                      ></div>
-                    </div>
-
-                    {/* Volume Control */}
-                    <div className="flex items-center gap-2">
-                      <Volume2 className="w-5 h-5 text-white" />
-                      <input
-                        type="range"
-                        min="0"
-                        max="100"
-                        value={volume * 100}
-                        onChange={handleVolumeChange}
-                        className="w-16 h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer"
-                        style={{
-                          background: `linear-gradient(to right, #8b5cf6 0%, #8b5cf6 ${volume * 100}%, #4b5563 ${volume * 100}%, #4b5563 100%)`
-                        }}
-                      />
-                    </div>
-
-                    {/* Fullscreen */}
-                    <button
-                      onClick={toggleFullscreen}
-                      className="w-6 h-6 text-white hover:text-purple-400 transition-colors"
-                    >
-                      <Maximize className="w-full h-full" />
-                    </button>
-
-                    {/* More options */}
-                    <button className="w-6 h-6 text-white hover:text-purple-400 transition-colors">
-                      <MoreHorizontal className="w-full h-full" />
-                    </button>
                   </div>
                 </div>
               </div>
