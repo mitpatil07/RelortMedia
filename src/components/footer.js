@@ -33,34 +33,34 @@ const Footer = () => {
         ></div>
       </div>
 
-      {/* Main Footer Content - Horizontal Layout */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
+      {/* Main Footer Content */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-7">
 
         {/* Top Section - Brand Centered */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center group cursor-pointer mb-6">
-            <Link to="/" className="text-4xl font-bold">
+        <div className="text-center mb-8 sm:mb-12">
+          <div className="flex items-center justify-center group cursor-pointer mb-4 sm:mb-6">
+            <Link to="/" className="text-2xl sm:text-3xl lg:text-4xl font-bold">
               <span className="text-white">RELORT</span>
               <span className="text-orange-500">MEDIA</span>
             </Link>
           </div>
 
-          {/* Navigation - Horizontal Cards */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
+          {/* Navigation - Responsive Cards Layout */}
+          <div className="flex flex-col lg:flex-row justify-center gap-4 lg:gap-6 mb-8 sm:mb-12">
             {/* Company Links Card */}
-            <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-800 hover:border-purple-500 transition-all duration-300">
-              <h3 className="text-white text-lg font-semibold mb-4 text-center relative">
+            <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-gray-800 hover:border-purple-500 transition-all duration-300 w-full lg:w-auto">
+              <h3 className="text-white text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-center relative">
                 Company
                 <div
                   className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-1 rounded-full"
                   style={{ backgroundColor: '#9112BC' }}
                 ></div>
               </h3>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center sm:justify-center">
                 <Link
                   to="/about"
                   onClick={handleDropdownItemClick}
-                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group text-sm"
+                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group text-sm w-full sm:w-auto justify-center sm:justify-start"
                 >
                   <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-200" />
                   <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -70,7 +70,7 @@ const Footer = () => {
                 <Link
                   to="/career"
                   onClick={handleDropdownItemClick}
-                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group text-sm"
+                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group text-sm w-full sm:w-auto justify-center sm:justify-start"
                 >
                   <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-200" />
                   <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -80,7 +80,7 @@ const Footer = () => {
                 <Link
                   to="/contact"
                   onClick={handleDropdownItemClick}
-                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group text-sm"
+                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group text-sm w-full sm:w-auto justify-center sm:justify-start"
                 >
                   <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-200" />
                   <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -91,19 +91,19 @@ const Footer = () => {
             </div>
 
             {/* Resources Links Card */}
-            <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-800 hover:border-purple-500 transition-all duration-300">
-              <h3 className="text-white text-lg font-semibold mb-4 text-center relative">
+            <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-gray-800 hover:border-purple-500 transition-all duration-300 w-full lg:w-auto">
+              <h3 className="text-white text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-center relative">
                 Resources
                 <div
                   className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-1 rounded-full"
                   style={{ backgroundColor: '#9112BC' }}
                 ></div>
               </h3>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center sm:justify-center">
                 <Link
                   to="/blog"
                   onClick={handleDropdownItemClick}
-                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group text-sm"
+                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group text-sm w-full sm:w-auto justify-center sm:justify-start"
                 >
                   <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-200" />
                   <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -113,7 +113,7 @@ const Footer = () => {
                 <Link
                   to="/free-training"
                   onClick={handleDropdownItemClick}
-                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group text-sm"
+                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group text-sm w-full sm:w-auto justify-center sm:justify-start"
                 >
                   <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-200" />
                   <span className="group-hover:translate-x-1 transition-transform duration-200 flex items-center">
@@ -128,9 +128,9 @@ const Footer = () => {
           </div>
 
           {/* Testimonial Disclaimer - Centered with Card Style */}
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-900 bg-opacity-30 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
-              <p className="text-gray-300 text-sm leading-relaxed text-center">
+          <div className="max-w-4xl mx-auto px-2 sm:px-0">
+            <div className="bg-gray-900 bg-opacity-30 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-gray-800">
+              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed text-justify sm:text-center">
                 All testimonials shown are real but do not claim to represent
                 typical results. Any success depends on many variables which are
                 unique to each individual, including commitment and effort.
@@ -146,26 +146,26 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="relative border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-              <p className="text-gray-400 text-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-center md:text-left">
+              <p className="text-gray-400 text-xs sm:text-sm">
                 © 2025 Relort Media. All rights reserved.
               </p>
 
               {/* Router Links */}
-              <div className="flex items-center space-x-6 text-sm">
-                <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200 hover:underline">
+              <div className="flex items-center space-x-4 sm:space-x-6 text-xs sm:text-sm">
+                <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200 hover:underline whitespace-nowrap">
                   Privacy Policy
                 </Link>
-                <Link to="/terms" className="text-gray-400 hover:text-white transition-colors duration-200 hover:underline">
+                <Link to="/terms" className="text-gray-400 hover:text-white transition-colors duration-200 hover:underline whitespace-nowrap">
                   Terms of Service
                 </Link>
               </div>
             </div>
 
-            <div className="flex items-center space-x-3">
-              <div className="flex items-center space-x-2 text-gray-400 text-sm">
+            <div className="flex items-center space-x-3 mt-2 md:mt-0">
+              <div className="flex items-center space-x-2 text-gray-400 text-xs sm:text-sm">
                 <div
                   className="w-2 h-2 rounded-full animate-pulse"
                   style={{ backgroundColor: '#9112BC' }}
@@ -176,7 +176,7 @@ const Footer = () => {
                 href="#"
                 className="text-green-500 hover:text-green-400 transition-colors duration-200"
               >
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             </div>
           </div>

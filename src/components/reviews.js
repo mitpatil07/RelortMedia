@@ -13,7 +13,7 @@ const ReviewsComponent = () => {
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
     },
     {
-      name: "James Zheng", 
+      name: "James Zheng",
       date: "Jul 15, 2025",
       title: "Confused Network Marketer - Now Empowered",
       content: "As a business professional with 16 years of experience, much of that spent in the online space, I've spent countless hours scouring the internet for every possible hack, tool, and strategy to grow organically on social media. I've studied algorithms, tested trends, and tried nearly every \"proven\" system out there. The problem? Most of what I found felt out of alignment. It was either inconsistent, dependent on paid ads, or constantly chasing the latest trend...none of which felt sustainable or authentic to me. What I've loved most about Viral Coach is that their content actually works because it's built on real, proven experience. It's not gimmicky, trend-chasing fluff. It's evergreen, value-driven content from mentors who've been in the trenches and know how to build true authority online.",
@@ -21,7 +21,7 @@ const ReviewsComponent = () => {
     },
     {
       name: "Katie Frederickson",
-      date: "Mar 18, 2025", 
+      date: "Mar 18, 2025",
       title: "Totally worth it!",
       content: "Just started using Viral Coach to jumpstart my business and I'm blown away by how much information I've already gained access to! Excited to put it all to work and grow with their support!",
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
@@ -41,7 +41,7 @@ const ReviewsComponent = () => {
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
     },
     {
-      name: "Adrian Alexander", 
+      name: "Adrian Alexander",
       date: "Jan 22, 2025",
       title: "Exceeded Expectations",
       content: "The coaching, the community, and the strategy have all been world-class. I'm already implementing what I've learned and for the first time in a long time, I feel excited, aligned, and confident about how I'm showing up on social media. Highly recommend.",
@@ -65,11 +65,11 @@ const ReviewsComponent = () => {
       <div className="relative max-w-7xl mx-auto">
         {/* Mobile and Desktop Layout */}
         <div className={`lg:flex lg:gap-8 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          
+
           {/* Left Section - Hero */}
           <div className="lg:w-2/5 mb-8 lg:mb-0">
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl border border-white/20 relative overflow-hidden">
-              
+
               {/* Animated background pattern */}
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600 to-transparent"></div>
@@ -78,27 +78,23 @@ const ReviewsComponent = () => {
               </div>
 
               <div className="relative z-10">
-                <div className="inline-flex items-center space-x-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full mb-6 animate-bounce">
-                  <Award className="w-4 h-4" />
-                  <span className="text-sm font-semibold">Reviews from real clients</span>
-                </div>
-                
+
                 <div className="mb-6">
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-2 leading-tight">
-                    <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent animate-pulse">
+                    <span className=" text-gray-800 bg-clip-text ">
                       4.9/5 Stars
                     </span>
                   </h1>
-                  
+
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-700 mb-4">
                     in 500+ Reviews
                   </h2>
-                  
+
                   <p className="text-gray-600 text-lg sm:text-xl leading-relaxed text-justify">
                     Check out a collection of our top reviews from TrustPilot and see why thousands of clients trust us.
                   </p>
                 </div>
-                
+
                 {/* Trustpilot-style rating */}
                 <div className="mb-8">
                   <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-2xl inline-flex items-center space-x-3 mb-4 shadow-lg transform hover:scale-105 transition-transform duration-300">
@@ -132,7 +128,7 @@ const ReviewsComponent = () => {
                     <div className="text-sm text-gray-600">Average Rating</div>
                   </div>
                 </div>
-                
+
                 <button className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-lg px-8 py-4 rounded-2xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 group">
                   <span>SEE MORE SUCCESS STORIES</span>
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -144,7 +140,7 @@ const ReviewsComponent = () => {
                   <ul className="space-y-3">
                     {[
                       "Proven strategies that actually work",
-                      "Real results from real clients", 
+                      "Real results from real clients",
                       "Ongoing support and community"
                     ].map((item, index) => (
                       <li key={index} className="flex items-center space-x-3 group">
@@ -157,57 +153,72 @@ const ReviewsComponent = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Right Section - Reviews */}
           <div className="lg:w-3/5">
-            <div className="space-y-6">
-              {reviews.map((review, index) => (
-                <div 
-                  key={index}
-                  className={`bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-xl border border-white/20 transform hover:scale-[1.02] transition-all duration-500 hover:shadow-2xl group relative overflow-hidden ${
-                    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                  }`}
-                  style={{ transitionDelay: `${index * 0.1}s` }}
-                >
-                  {/* Hover gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-50 to-indigo-50 opacity-0 group-hover:opacity-50 transition-opacity duration-500 rounded-3xl"></div>
-                  
-                  <div className="relative z-10">
-                    <div className="flex items-start space-x-4 mb-6">
-                      <div className="relative">
-                        <img 
-                          src={review.avatar}
-                          alt={review.name}
-                          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-purple-100 group-hover:border-purple-300 transition-colors duration-300 shadow-lg"
-                        />
-                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 overflow-hidden">
+              {/* Reviews Header */}
+              <div className="p-6 sm:p-8 border-b border-gray-100">
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">Client Reviews</h3>
+                <p className="text-gray-600">See what our clients are saying about us</p>
+              </div>
+
+              {/* Scrollable Reviews Container */}
+              <div className="h-[600px] lg:h-[700px] overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                <style jsx>{`
+                  div::-webkit-scrollbar {
+                    display: none;
+                  }
+                `}</style>
+                <div className="p-6 sm:p-8 space-y-6">
+                  {reviews.map((review, index) => (
+                    <div
+                      key={index}
+                      className={`bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 group relative overflow-hidden ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                        }`}
+                      style={{ transitionDelay: `${index * 0.1}s` }}
+                    >
+                      {/* Hover gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-50 to-indigo-50 opacity-0 group-hover:opacity-30 transition-opacity duration-300 rounded-2xl"></div>
+
+                      <div className="relative z-10">
+                        <div className="flex items-start space-x-4 mb-4">
+                          <div className="relative">
+                            <img
+                              src={review.avatar}
+                              alt={review.name}
+                              className="w-12 h-12 rounded-full object-cover border-2 border-purple-100 group-hover:border-purple-300 transition-colors duration-300"
+                            />
+                            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                              <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="font-bold text-lg text-gray-800 group-hover:text-purple-700 transition-colors duration-300">{review.name}</h3>
+                            <p className="text-gray-500 text-sm">{review.date}</p>
+                          </div>
+                        </div>
+
+                        <h4 className="font-semibold text-base text-gray-800 mb-3 group-hover:text-purple-700 transition-colors duration-300">{review.title}</h4>
+
+                        <div className="text-gray-700 leading-relaxed text-sm">
+                          {review.content}
+                        </div>
+
+                        {/* Rating stars */}
+                        <div className="flex items-center mt-4 pt-3 border-t border-gray-100">
+                          <div className="flex space-x-1">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                            ))}
+                          </div>
+                          <span className="ml-2 text-sm text-gray-500">5.0</span>
                         </div>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="font-bold text-xl sm:text-2xl text-gray-800 group-hover:text-purple-700 transition-colors duration-300">{review.name}</h3>
-                        <p className="text-gray-500 text-sm">{review.date}</p>
-                      </div>
                     </div>
-                    
-                    <h4 className="font-bold text-lg sm:text-xl text-gray-800 mb-4 group-hover:text-purple-700 transition-colors duration-300">{review.title}</h4>
-                    
-                    <div className="text-gray-700 leading-relaxed text-justify">
-                      {review.content}
-                    </div>
-                    
-                    {/* Verified badge */}
-                    <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
-                      {/* <div className="flex items-center space-x-2 text-green-600">
-                        <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
-                        </div>
-                        <span className="text-sm font-medium">Verified Review</span>
-                      </div> */}
-                    </div>
-                  </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
