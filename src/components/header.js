@@ -90,14 +90,20 @@ export default function ContentMarketingLanding() {
   const togglePlay = () => {
     const video = videoRef.current;
     if (!video) return;
-
+  
     if (isPlaying) {
       video.pause();
+      setIsPlaying(false);
     } else {
+      // 🔊 Unmute when user plays manually
+      video.muted = false;
       video.play();
+      setIsPlaying(true);
     }
-    setIsPlaying(!isPlaying);
   };
+  
+
+  
 
   const formatTime = (time) => {
     if (!time || isNaN(time)) return '0:00';
@@ -137,9 +143,9 @@ export default function ContentMarketingLanding() {
   };
 
   return (
-    <div className="min-h-screen mt-5 bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-100 relative overflow-hidden" 
-         style={{ fontFamily: "'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif" }}>
-      
+    <div className="min-h-screen mt-5 bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-100 relative overflow-hidden"
+      style={{ fontFamily: "'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif" }}>
+
       {/* Global Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-20 sm:w-32 h-20 sm:h-32 bg-gradient-to-r from-purple-300 to-pink-300 rounded-full opacity-20 animate-bounce" style={{ animationDuration: '3s' }}></div>
@@ -164,22 +170,18 @@ export default function ContentMarketingLanding() {
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-r from-purple-200 via-pink-200 to-indigo-200 rounded-full opacity-10 animate-pulse" style={{ animationDuration: '4s' }}></div>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-purple-900 mb-4 sm:mb-6 tracking-tight relative z-10 animate-fade-in-up leading-tight px-2 text-center">
+          <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-5xl mt-7 font-black text-purple-900 mb-4 sm:mb-6 tracking-tight relative z-10 animate-fade-in-up leading-tight px-2 text-center">
             Grow Your Business With Content
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-purple-700 mb-6 sm:mb-8 font-medium relative z-10 animate-fade-in-up leading-relaxed px-4 text-center" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-purple-700 mb-4 sm:mb-6 font-medium relative z-10 animate-fade-in-up leading-relaxed px-4 text-center" style={{ animationDelay: '0.2s' }}>
             Content systems with powerful business outcomes
           </p>
 
           {/* Trust Rating */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 relative z-10 animate-fade-in-up px-4" style={{ animationDelay: '0.4s' }}>
             <span className="text-purple-900 font-semibold text-base sm:text-lg">Excellent</span>
-            <div className="flex gap-1">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                ))}
-              </div>
+            <div className="flex">
+              <img src='/stars.avif' className='h-4' />
             </div>
             <span className="text-purple-700 font-semibold text-sm sm:text-base">600+ Reviews</span>
           </div>
@@ -200,7 +202,12 @@ export default function ContentMarketingLanding() {
                         onClick={togglePlay}
                         src="https://res.cloudinary.com/dsugjsdvu/video/upload/v1756854780/Daniel_VSL_Close_Up_Mar_3_2024_ycslmi.mp4"
                         preload="metadata"
+                        autoPlay
+                        muted
+                        playsInline
                       />
+
+
 
                       {/* Play Button Overlay */}
                       <div className="absolute inset-0 flex items-center justify-center">
@@ -222,7 +229,7 @@ export default function ContentMarketingLanding() {
                             >
                               <Pause className="w-3 h-3 text-white" fill="currentColor" />
                             </button>
-                            
+
                             <div
                               ref={progressRef}
                               className="flex-1 h-1 bg-gray-600 rounded-full overflow-hidden cursor-pointer"
@@ -248,13 +255,13 @@ export default function ContentMarketingLanding() {
           </div>
 
           {/* CTA Button */}
-          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 sm:py-4 px-8 sm:px-12 rounded-xl text-base sm:text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 animate-bounce-subtle relative z-10 mx-4">
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 sm:py-4 px-8 sm:px-12 rounded-xl text-base sm:text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 relative z-10 mx-4">
             GET STARTED
           </button>
         </div>
 
         {/* Brands Section */}
-        <div className="text-center mb-16 sm:mb-20 relative">
+        <div className="text-center mb-10 sm:mb-16 relative">
           <h3 className="text-xl sm:text-2xl font-semibold text-purple-800 mb-8 sm:mb-12 relative z-10 px-4 text-center leading-relaxed">
             We've worked with brands like
           </h3>

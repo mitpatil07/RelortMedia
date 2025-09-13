@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Sparkles, Shield, Rocket, Users, Star, ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const FAQComponent = () => {
   const [openItems, setOpenItems] = useState(new Set());
@@ -69,7 +70,7 @@ const FAQComponent = () => {
           {faqData.map((item, index) => {
             const isOpen = openItems.has(index);
             const Icon = item.icon;
-            
+
             return (
               <div
                 key={index}
@@ -80,11 +81,10 @@ const FAQComponent = () => {
                   className="w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-left flex items-center justify-between hover:bg-purple-50/50 transition-colors duration-200 min-h-[80px] sm:min-h-[88px]"
                 >
                   <div className="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
-                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 ${
-                      isOpen 
-                        ? 'bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg' 
+                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 ${isOpen
+                        ? 'bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg'
                         : 'bg-purple-100 text-purple-600 group-hover:bg-purple-200'
-                    }`}>
+                      }`}>
                       <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <span className="text-base sm:text-lg lg:text-xl font-semibold text-gray-800 group-hover:text-purple-700 transition-colors duration-200 leading-tight text-left">
@@ -95,10 +95,9 @@ const FAQComponent = () => {
                     <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" />
                   </div>
                 </button>
-                
-                <div className={`transition-all duration-300 ease-in-out ${
-                  isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                } overflow-hidden`}>
+
+                <div className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                  } overflow-hidden`}>
                   <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-5 lg:pb-6">
                     <div className="pl-11 sm:pl-14 pr-4 sm:pr-8">
                       <p className="text-gray-600 leading-relaxed text-sm sm:text-base lg:text-lg text-justify hyphens-auto">
@@ -115,9 +114,12 @@ const FAQComponent = () => {
         {/* Enhanced CTA Section */}
         <div className="text-center relative">
           {/* CTA Button */}
-          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 sm:py-4 px-8 sm:px-12 rounded-xl text-base sm:text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 active:scale-95">
+          <Link
+            to="/get-started"
+            className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 sm:py-4 px-8 sm:px-12 rounded-xl text-base sm:text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 active:scale-95"
+          >
             GET STARTED
-          </button>
+          </Link>
         </div>
 
         {/* Decorative Elements - Enhanced for mobile */}

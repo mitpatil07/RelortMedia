@@ -64,7 +64,7 @@ const Navbar = () => {
 
   return (
     <>
-<nav className={`fixed top-5 left-4 right-4 sm:left-6 sm:right-6 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:w-[90%] mx-auto z-50 transition-all duration-500 ease-out rounded-2xl bg-white shadow-lg ${
+<nav className={`fixed top-5 left-4 right-4 py-2 sm:left-6 sm:right-6 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:w-[90%] mx-auto z-50 transition-all duration-500 ease-out rounded-2xl bg-white shadow-lg ${
 scrolled 
           ? 'bg-gray-900/95 backdrop-blur-xl shadow-2xl border-b border-white/10' 
           : 'bg-gray-900'
@@ -74,16 +74,27 @@ scrolled
           <div className="flex justify-between items-center h-16">
             {/* Enhanced Logo */}
             <div className="flex-shrink-0 flex items-center group cursor-pointer">
-              <Link to="/" className="flex items-center space-x-3 transform transition-all duration-300 hover:scale-105">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <Link to="/" className="flex items-center space-x-4 transform transition-all duration-300 hover:scale-105">
+                <div className="relative flex items-center justify-center">
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300 scale-125"></div>
+                  
+                  {/* Logo container with better sizing */}
+                  <div className="relative z-10 flex items-center justify-center p-1">
                     <img 
                       src="/logo.png" 
                       alt="Logo" 
-                      className="w-10 h-10 ml-10 sm:w-12 sm:h-12 lg:w-15 lg:h-15 relative z-10 transition-transform duration-300 group-hover:scale-110" 
+                      className="w-16 h-16 sm:w-16 sm:h-16 lg:w-16 lg:h-16 object-contain transition-all duration-300 group-hover:scale-110 filter drop-shadow-lg" 
+                      style={{
+                        maxWidth: 'none',
+                        height: 'auto',
+                        aspectRatio: 'auto'
+                      }}
                     />
-
+                  </div>
                 </div>
+                
+                {/* Decorative line */}
                 <div className="hidden sm:block">
                   <div className="h-0.5 w-8 sm:w-12 bg-gradient-to-r from-purple-500 to-transparent group-hover:from-purple-400 transition-all duration-300"></div>
                 </div>
@@ -233,7 +244,7 @@ scrolled
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <span className="relative z-10 flex items-center space-x-2">
-                  <span className="hidden lg:inline">Start Testing</span>
+                  <span className="hidden lg:inline">Get Start</span>
                   <span className="lg:hidden">Start</span>
                   <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
@@ -361,7 +372,7 @@ scrolled
                     className="w-full text-white px-6 py-3.5 rounded-xl text-base font-semibold transition-all duration-300 hover:scale-105 bg-gradient-to-r from-purple-600 to-pink-600 shadow-lg hover:shadow-purple-500/25"
                   >
                     <span className="flex items-center justify-center space-x-2">
-                      <span>Start Testing</span>
+                      <span>Get Start</span>
                       <ArrowRight className="w-4 h-4" />
                     </span>
                   </button>
