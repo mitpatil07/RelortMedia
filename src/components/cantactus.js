@@ -157,11 +157,11 @@ const ContactForm = () => {
     const isFocused = focusedField === name;
     
     return (
-      <div className="relative">
-        <label htmlFor={name} className={`block text-sm font-semibold mb-2 transition-colors duration-200 flex items-center gap-2
+      <div className="relative ">
+        <label htmlFor={name} className={`block text-sm sm:text-base font-semibold mb-2 sm:mb-3 transition-colors duration-200 flex items-center gap-2
           ${isFocused ? 'text-purple-600' : hasError ? 'text-red-500' : 'text-gray-700'}`}>
-          {Icon && <Icon size={16} />}
-          {label}
+          {Icon && <Icon size={16} className="sm:w-5 sm:h-5" />}
+          <span className="leading-relaxed">{label}</span>
         </label>
         <div className="relative">
           {children || (
@@ -174,7 +174,7 @@ const ContactForm = () => {
               onFocus={() => setFocusedField(name)}
               onBlur={() => setFocusedField('')}
               placeholder={placeholder}
-              className={`w-full px-5 py-4 border-2 rounded-xl text-base transition-all duration-300 outline-none
+              className={`w-full px-4 py-3 sm:px-5 sm:py-4 border-2 rounded-xl text-base transition-all duration-300 outline-none
                 ${hasError 
                   ? 'border-red-300 bg-red-50 focus:border-red-500 focus:ring-4 focus:ring-red-500/10' 
                   : isFocused
@@ -197,8 +197,8 @@ const ContactForm = () => {
         {/* Error message with slide-in animation */}
         {hasError && (
           <div className="mt-2 text-sm text-red-500 flex items-center animate-slide-down">
-            <AlertCircle size={16} className="mr-1" />
-            {hasError}
+            <AlertCircle size={16} className="mr-1 flex-shrink-0" />
+            <span className="leading-relaxed">{hasError}</span>
           </div>
         )}
       </div>
@@ -206,17 +206,17 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50 py-10 px-5 mt-20 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50 py-10 sm:py-10 px-4 sm:px-5 lg:px-6 mt-16 sm:mt-20 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float-delayed"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -top-20 sm:-top-40 -right-20 sm:-right-40 w-40 h-40 sm:w-80 sm:h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
+        <div className="absolute -bottom-20 sm:-bottom-40 -left-20 sm:-left-40 w-40 h-40 sm:w-80 sm:h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float-delayed"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-60 sm:h-60 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
       </div>
 
-      <div ref={formRef} className="max-w-2xl mx-auto bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl shadow-purple-500/20 overflow-hidden border border-white/50 transition-transform duration-300 relative z-10">
+      <div ref={formRef} className="max-w-2xl  mx-auto bg-white/90 backdrop-blur-sm rounded-2xl sm:rounded-3xl shadow-2xl shadow-purple-500/20 overflow-hidden border border-white/50 transition-transform duration-300 relative z-10">
         {/* Header with enhanced gradient and animations */}
-        <div className="relative bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-700 px-10 py-20 text-center text-white overflow-hidden">
+        <div className="relative bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-700 px-6 sm:px-10 py-12 sm:py-20 text-center text-white overflow-hidden">
           {/* Animated background pattern */}
           <div className="absolute inset-0 opacity-20">
             {[...Array(8)].map((_, i) => (
@@ -235,22 +235,22 @@ const ContactForm = () => {
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10"></div>
           
-          <div className="relative z-10 space-y-4">
+          <div className="relative z-10 space-y-3 sm:space-y-4">
             <div className="inline-block animate-bounce-slow">
-              <MessageCircle size={64} className="text-white" />
+              <MessageCircle size={48} className="text-white sm:w-16 sm:h-16" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-black mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-100">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black mb-3 sm:mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-100 leading-tight">
               Let's Connect
             </h1>
-            <p className="text-xl opacity-90 font-medium max-w-md mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl opacity-90 font-medium max-w-xs sm:max-w-md mx-auto leading-relaxed px-2 sm:px-0">
               Your success story starts with a simple message. We're excited to hear from you!
             </p>
           </div>
         </div>
 
         {/* Form Container with enhanced styling */}
-        <div className="px-10 py-12">
-          <div className="space-y-8">
+        <div className="px-6 sm:px-10 py-8 sm:py-12">
+          <div className="space-y-6 sm:space-y-8">
             <InputField
               label="Full Name"
               name="fullName"
@@ -281,7 +281,7 @@ const ContactForm = () => {
                 onChange={handleInputChange}
                 onFocus={() => setFocusedField('subject')}
                 onBlur={() => setFocusedField('')}
-                className={`w-full px-5 py-4 border-2 rounded-xl text-base transition-all duration-300 outline-none
+                className={`w-full px-4 py-3 sm:px-5 sm:py-4 border-2 rounded-xl text-base transition-all duration-300 outline-none
                   ${formErrors.subject 
                     ? 'border-red-300 bg-red-50 focus:border-red-500 focus:ring-4 focus:ring-red-500/10' 
                     : focusedField === 'subject'
@@ -316,14 +316,14 @@ const ContactForm = () => {
                 placeholder="Tell us what's on your mind..."
                 required
                 rows={5}
-                className={`w-full px-5 py-4 border-2 rounded-xl text-base transition-all duration-300 outline-none resize-y min-h-[140px]
+                className={`w-full px-4 py-3 sm:px-5 sm:py-4 border-2 rounded-xl text-base transition-all duration-300 outline-none resize-y min-h-[120px] sm:min-h-[140px]
                   ${formErrors.message 
                     ? 'border-red-300 bg-red-50 focus:border-red-500 focus:ring-4 focus:ring-red-500/10' 
                     : focusedField === 'message'
                       ? 'border-purple-500 bg-white ring-4 ring-purple-500/10 shadow-lg shadow-purple-500/10'
                       : 'border-gray-200 bg-gray-50 focus:border-purple-500 focus:bg-white hover:border-gray-300'
                   }
-                  placeholder-gray-400`}
+                  placeholder-gray-400 leading-relaxed`}
               />
             </InputField>
 
@@ -331,7 +331,7 @@ const ContactForm = () => {
             <button
               onClick={handleSubmit}
               disabled={isSubmitting}
-              className={`relative w-full px-8 py-6 rounded-xl text-lg font-bold text-white 
+              className={`relative w-full px-6 sm:px-8 py-4 sm:py-6 rounded-xl text-base sm:text-lg font-bold text-white 
                        transition-all duration-500 overflow-hidden group transform
                        ${isSubmitted 
                          ? 'bg-gradient-to-r from-green-500 to-emerald-600 scale-105' 
@@ -339,7 +339,7 @@ const ContactForm = () => {
                        }
                        ${!isSubmitting && !isSubmitted ? 'hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/30 active:scale-98' : ''}
                        ${isSubmitting ? 'cursor-not-allowed animate-pulse' : 'cursor-pointer'}
-                       disabled:opacity-80 shadow-lg`}
+                       disabled:opacity-80 shadow-lg leading-relaxed`}
             >
               {/* Enhanced shimmer effect */}
               {!isSubmitting && !isSubmitted && (
@@ -353,13 +353,13 @@ const ContactForm = () => {
               
               {/* Loading spinner */}
               {isSubmitting && (
-                <div className="absolute left-6 top-1/2 -translate-y-1/2">
+                <div className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2">
                   <Loader className="w-5 h-5 animate-spin" />
                 </div>
               )}
               
               <span className={`relative z-10 flex items-center justify-center gap-2 transition-all duration-300
-                ${isSubmitting ? 'pl-8' : ''}`}>
+                ${isSubmitting ? 'pl-6 sm:pl-8' : ''}`}>
                 {isSubmitting ? (
                   'Sending Your Message...'
                 ) : isSubmitted ? (
@@ -378,29 +378,29 @@ const ContactForm = () => {
           </div>
 
           {/* Enhanced Support Info */}
-          <div className="text-center mt-10 pt-8 border-t border-gray-200/60">
-            <p className="text-gray-600 mb-3 font-medium">Need immediate assistance?</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="text-center mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-gray-200/60">
+            <p className="text-gray-600 mb-3 font-medium text-sm sm:text-base leading-relaxed">Need immediate assistance?</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <a 
                 href="mailto:support@viralcoach.com" 
-                className="inline-flex items-center gap-2 text-purple-600 font-semibold hover:text-purple-700 hover:underline transition-all duration-200 px-4 py-2 rounded-lg hover:bg-purple-50"
+                className="inline-flex items-center gap-2 text-purple-600 font-semibold hover:text-purple-700 hover:underline transition-all duration-200 px-3 sm:px-4 py-2 rounded-lg hover:bg-purple-50 text-sm sm:text-base"
               >
-                <Mail size={18} />
-                support@viralcoach.com
+                <Mail size={16} className="sm:w-5 sm:h-5 flex-shrink-0" />
+                <span className="break-all sm:break-normal">support@viralcoach.com</span>
               </a>
               <span className="hidden sm:block text-gray-400">|</span>
               <a 
                 href="tel:+1234567890" 
-                className="inline-flex items-center gap-2 text-purple-600 font-semibold hover:text-purple-700 hover:underline transition-all duration-200 px-4 py-2 rounded-lg hover:bg-purple-50"
+                className="inline-flex items-center gap-2 text-purple-600 font-semibold hover:text-purple-700 hover:underline transition-all duration-200 px-3 sm:px-4 py-2 rounded-lg hover:bg-purple-50 text-sm sm:text-base"
               >
-                <Phone size={18} />
+                <Phone size={16} className="sm:w-5 sm:h-5 flex-shrink-0" />
                 (123) 456-7890
               </a>
             </div>
           </div>
 
           {/* Enhanced Feature Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-10 sm:mt-12">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
@@ -408,7 +408,7 @@ const ContactForm = () => {
                   key={index}
                   ref={el => cardRefs.current[index] = el}
                   data-card-index={index}
-                  className={`relative group bg-white p-8 rounded-2xl text-center border border-gray-200/60 shadow-lg hover:shadow-xl
+                  className={`relative group bg-white p-6 sm:p-8 rounded-xl sm:rounded-2xl text-center border border-gray-200/60 shadow-lg hover:shadow-xl
                             transition-all duration-700 ease-out hover:-translate-y-1 overflow-hidden
                             ${visibleCards.has(index) 
                               ? 'opacity-100 translate-y-0' 
@@ -419,16 +419,16 @@ const ContactForm = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-indigo-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   <div className="relative z-10">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${feature.gradient} 
-                                  rounded-2xl mx-auto mb-6 flex items-center justify-center text-white
+                    <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${feature.gradient} 
+                                  rounded-xl sm:rounded-2xl mx-auto mb-4 sm:mb-6 flex items-center justify-center text-white
                                   shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300
                                   group-hover:rotate-3`}>
-                      <IconComponent size={28} />
+                      <IconComponent size={20} className="sm:w-7 sm:h-7" />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-800 mb-3 group-hover:text-purple-700 transition-colors duration-300">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-purple-700 transition-colors duration-300 leading-tight">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                       {feature.description}
                     </p>
                   </div>
@@ -440,6 +440,15 @@ const ContactForm = () => {
       </div>
 
       <style jsx>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+        * {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
           50% { transform: translateY(-20px) rotate(180deg); }
@@ -466,7 +475,48 @@ const ContactForm = () => {
         .animate-twinkle { animation: twinkle 2s ease-in-out infinite; }
         .animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
         .animate-slide-down { animation: slide-down 0.3s ease-out; }
+        .animate-wave-texture { animation: wave-texture 15s ease-in-out infinite; }
+        .animate-wave-texture-reverse { animation: wave-texture-reverse 18s ease-in-out infinite; }
+        .animate-wave-organic { animation: wave-organic 20s ease-in-out infinite; }
+        .animate-wave-dots { animation: wave-dots 25s ease-in-out infinite; }
         .active\\:scale-98:active { transform: scale(0.98); }
+        
+        /* Enhanced text justification and readability */
+        p, span, label, input, textarea, select, button {
+          text-align: left;
+        }
+        
+        .text-center p, .text-center span, .text-center label {
+          text-align: center;
+        }
+        
+        /* Better mobile typography */
+        @media (max-width: 640px) {
+          h1 {
+            line-height: 1.1;
+          }
+          
+          p, span, label {
+            line-height: 1.6;
+          }
+        }
+        
+        /* Enhanced focus states for accessibility */
+        input:focus, textarea:focus, select:focus, button:focus {
+          outline: 2px solid transparent;
+          outline-offset: 2px;
+        }
+        
+        /* Better text overflow handling */
+        .break-all {
+          word-break: break-all;
+        }
+        
+        @media (min-width: 640px) {
+          .sm\\:break-normal {
+            word-break: normal;
+          }
+        }
       `}</style>
     </div>
   );
