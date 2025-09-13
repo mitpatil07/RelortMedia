@@ -31,7 +31,6 @@ import img25 from '../sliderlogos/wonderay.avif';
 import ReviewsComponent from './getstart/reviewscard';
 import GetStartedButton from './items/button';
 
-
 export default function ContentMarketingLanding() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -64,9 +63,7 @@ export default function ContentMarketingLanding() {
     { id: 23, image: img23 },
     { id: 24, image: img24 },
     { id: 25, image: img25 }
-
   ];
-
 
   const duplicatedImages = [...brands, ...brands, ...brands];
 
@@ -97,7 +94,6 @@ export default function ContentMarketingLanding() {
       video.pause();
       setIsPlaying(false);
     } else {
-      // 🔊 Unmute when user plays manually
       video.muted = false;
       video.play();
       setIsPlaying(true);
@@ -122,11 +118,10 @@ export default function ContentMarketingLanding() {
     video.currentTime = newTime;
   };
 
-
   return (
-    <div className="min-h-screen pt-16 bg-black relative overflow-hidden">
+    <div className="min-h-screen pt-12 sm:pt-16 bg-black relative overflow-hidden">
       {/* Animated Wave Background */}
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 opacity-20 sm:opacity-30">
         <svg
           className="w-full h-full object-cover"
           viewBox="0 0 1920 1080"
@@ -171,108 +166,108 @@ export default function ContentMarketingLanding() {
 
       {/* Grid Pattern Overlay */}
       <div
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0 opacity-5 sm:opacity-10"
         style={{
           backgroundImage: `
             linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
+          backgroundSize: '30px 30px'
         }}
       ></div>
 
       {/* Main Container */}
-      <div className="max-w-6xl mx-auto px-6 py-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 relative z-10">
         {/* Header Section */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           {/* Brand Logo */}
-          <div className="mb-8">
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-2">
+          <div className="mb-6 sm:mb-8">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white mb-2">
               <span className="text-purple-400">VIRAL</span> COACH
             </h1>
           </div>
 
           {/* Trust Rating */}
-          <div className="flex items-center justify-center gap-3 mb-12">
-            <span className="text-white font-semibold">Excellent</span>
-            <div className="flex gap-1">
-              {[...Array(5)].map((_, i) => (
-                <div key={i} className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs">★</div>
-              ))}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 px-4">
+            <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
+              <span className="text-white font-semibold text-sm sm:text-base">Excellent</span>
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className="w-4 h-4 sm:w-5 sm:h-5 bg-green-500 text-white flex items-center justify-center text-xs">★</div>
+                ))}
+              </div>
+              <span className="text-green-400 font-bold text-sm sm:text-base">4.9</span>
             </div>
-            <span className="text-green-400 font-bold">4.9</span>
-            <span className="text-gray-300">out of 5 based on</span>
-            <span className="text-white font-bold">600+ reviews</span>
-            <span className="text-green-400 font-semibold">★ Trustpilot</span>
+            <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-center text-xs sm:text-sm">
+              <span className="text-gray-300">out of 5 based on</span>
+              <span className="text-white font-bold">600+ reviews</span>
+              <span className="text-green-400 font-semibold">★ Trustpilot</span>
+            </div>
           </div>
 
           {/* Main Headline */}
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight pb-5">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white mb-6 sm:mb-8 leading-tight px-2">
             Get all of your content DONE<br />
-            <span className="text-purple-400 font-semibold">In just 2 hours a month👇</span>
+            <span className="text-purple-400 font-semibold text-xl sm:text-3xl lg:text-4xl">In just 2 hours a month👇</span>
           </h2>
 
           {/* Video Testimonial Card */}
-          <div className="relative max-w-4xl mx-auto mb-12">
-            <div className="bg-gradient-to-br from-purple-400 via-violet-400 to-purple-500 rounded-3xl p-1 shadow-2xl">
-              <div className="bg-white rounded-3xl overflow-hidden">
+          <div className="relative max-w-5xl mx-auto mb-8 sm:mb-12 px-2 sm:px-4">
+            <div className="bg-gradient-to-br from-purple-400 via-violet-400 to-purple-500 rounded-2xl sm:rounded-3xl p-0.5 sm:p-1 shadow-2xl">
+              <div className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden">
                 {/* Video Content */}
-                <div className="flex items-start ">
+                <div className="w-full">
+                  <div className="relative w-full overflow-hidden bg-black group cursor-pointer shadow-2xl">
+                    {/* Actual Video */}
+                    <video
+                      ref={videoRef}
+                      className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover"
+                      onClick={togglePlay}
+                      src="https://res.cloudinary.com/dsugjsdvu/video/upload/v1756854780/Daniel_VSL_Close_Up_Mar_3_2024_ycslmi.mp4"
+                      preload="metadata"
+                      autoPlay
+                      muted
+                      playsInline
+                    />
 
-                  {/* Right Side - Video Player */}
-                  <div>
-                    <div className="relative w-full h-full overflow-hidden bg-black group cursor-pointer shadow-2xl border-4 border-gray-200">
-                      {/* Actual Video */}
-                      <video
-                        ref={videoRef}
-                        className="w-full h-full object-cover"
+                    {/* Play Button Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <button
                         onClick={togglePlay}
-                        src="https://res.cloudinary.com/dsugjsdvu/video/upload/v1756854780/Daniel_VSL_Close_Up_Mar_3_2024_ycslmi.mp4"
-                        preload="metadata"
-                        autoPlay
-                        muted
-                        playsInline
-                      />
-
-                      {/* Play Button Overlay */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <button
-                          onClick={togglePlay}
-                          className={`w-20 h-20 bg-white bg-opacity-90 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-opacity-100 transition-all duration-300 hover:scale-110 shadow-2xl ${!isPlaying ? 'animate-pulse' : 'opacity-0'}`}
-                        >
-                          <Play className="w-10 h-10 text-gray-800 ml-2" fill="currentColor" />
-                        </button>
-                      </div>
-
-                      {/* Video Controls */}
-                      {isPlaying && (
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
-                          <div className="flex items-center gap-2">
-                            <button
-                              onClick={togglePlay}
-                              className="w-6 h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all"
-                            >
-                              <Pause className="w-3 h-3 text-white" fill="currentColor" />
-                            </button>
-
-                            <div
-                              ref={progressRef}
-                              className="flex-1 h-1 bg-gray-600 rounded-full overflow-hidden cursor-pointer"
-                              onClick={handleProgressClick}
-                            >
-                              <div
-                                className="h-full bg-white rounded-full transition-all duration-100"
-                                style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}
-                              ></div>
-                            </div>
-
-                            <span className="text-white text-xs font-mono">
-                              {formatTime(currentTime)} / {formatTime(duration)}
-                            </span>
-                          </div>
-                        </div>
-                      )}
+                        className={`w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white bg-opacity-90 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-opacity-100 transition-all duration-300 hover:scale-110 shadow-2xl ${!isPlaying ? 'animate-pulse' : 'opacity-0'}`}
+                      >
+                        <Play className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-gray-800 ml-1" fill="currentColor" />
+                      </button>
                     </div>
+
+                    {/* Video Controls */}
+                    {isPlaying && (
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2 sm:p-4">
+                        <div className="flex items-center gap-2">
+                          <button
+                            onClick={togglePlay}
+                            className="w-6 h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all"
+                          >
+                            <Pause className="w-3 h-3 text-white" fill="currentColor" />
+                          </button>
+
+                          <div
+                            ref={progressRef}
+                            className="flex-1 h-1 bg-gray-600 rounded-full overflow-hidden cursor-pointer"
+                            onClick={handleProgressClick}
+                          >
+                            <div
+                              className="h-full bg-white rounded-full transition-all duration-100"
+                              style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}
+                            ></div>
+                          </div>
+
+                          <span className="text-white text-xs font-mono hidden sm:inline">
+                            {formatTime(currentTime)} / {formatTime(duration)}
+                          </span>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -280,24 +275,25 @@ export default function ContentMarketingLanding() {
           </div>
 
           {/* Trusted By Section */}
-          <div className="mb-12">
-            <h3 className="text-white text-2xl font-bold mb-4">
+          <div className="mb-8 sm:mb-12">
+            <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-bold mb-4 sm:mb-6 px-4">
               Trusted by brands like
             </h3>
 
             {/* Brands Slider */}
-            <div className="relative overflow-hidden py-4">
+            <div className="relative overflow-hidden py-2 sm:py-4">
               <div className="flex animate-slide-infinite">
                 {duplicatedImages.map((image, index) => (
-                  <div key={index} className="flex items-center justify-center flex-shrink-0 w-50 px-4">
-                    <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2 hover:bg-opacity-20 transition-all duration-300">
+                  <div key={index} className="flex items-center justify-center flex-shrink-0 w-24 sm:w-32 md:w-40 lg:w-50 px-2 sm:px-4">
+                    <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-md sm:rounded-lg px-2 sm:px-4 py-1 sm:py-2 hover:bg-opacity-20 transition-all duration-300 w-full flex items-center justify-center">
                       <img
                         src={image.image}
                         alt="brand logo"
-                        className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                        className="h-4 sm:h-6 lg:h-8 w-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
                         loading="lazy"
                         style={{
                           filter: 'brightness(0) invert(1)',
+                          maxWidth: '100%'
                         }}
                       />
                     </div>
@@ -307,7 +303,9 @@ export default function ContentMarketingLanding() {
             </div>
           </div>
 
-          <GetStartedButton />
+          <div className="px-4">
+            <GetStartedButton />
+          </div>
         </div>
       </div>
 
@@ -323,11 +321,17 @@ export default function ContentMarketingLanding() {
         }
         
         .animate-slide-infinite {
-          animation: slide-infinite 20s linear infinite;
+          animation: slide-infinite 25s linear infinite;
         }
         
         .animate-slide-infinite:hover {
           animation-play-state: paused;
+        }
+
+        @media (max-width: 640px) {
+          .animate-slide-infinite {
+            animation: slide-infinite 15s linear infinite;
+          }
         }
 
         @keyframes float {
@@ -343,8 +347,8 @@ export default function ContentMarketingLanding() {
           animation: float 6s ease-in-out infinite;
         }
       `}</style>
-      <VideoCards />
       
+      <VideoCards />
       <ImgCards />
       <ReviewsComponent />
     </div>
