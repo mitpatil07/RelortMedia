@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Star, ChevronLeft, ChevronRight, Users, Award, TrendingUp } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const ReviewsComponent = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -229,9 +230,9 @@ const ReviewsComponent = () => {
             <p className="text-purple-100 mb-6 text-lg">
               Start creating content that actually gets views and grows your business
             </p>
-            <button className="bg-white text-purple-600 font-bold py-4 px-8 rounded-xl hover:bg-purple-50 transition-all duration-200 hover:scale-105 shadow-lg">
+            <Link to="/get-started" className="bg-white text-purple-600 font-bold py-4 px-8 rounded-xl hover:bg-purple-50 transition-all duration-200 hover:scale-105 shadow-lg">
               Get Started Today
-            </button>
+            </Link>
           </div>
         </div>
       </div>

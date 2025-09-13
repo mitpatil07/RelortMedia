@@ -1,6 +1,51 @@
 import React, { useState, useEffect } from 'react';
 import { Play, Star, Users, TrendingUp, DollarSign, Eye } from 'lucide-react';
 
+import img1 from '../work/stories/1.avif';
+import img2 from '../work/stories/3lHe5PCuxlPk1acjmit7ZDJUsTA.avif';
+import img3 from '../work/stories/179x4jr2SHQ4GYogwC1l1t5s.avif';
+import img4 from '../work/stories/4fLPGaDYgCvqIfG4B7C7RImoI.avif'
+import img5 from '../work/stories/8bYTCoIURUZY4nFEqpzfnZ5ufs.avif';
+import img6 from '../work/stories/9IAMgkspAp50yjO1C2J5iUCq0o.avif';
+import img7 from '../work/stories/FMHVnJ48qacexECMcEWpEWljPw.avif';
+import img8 from '../work/stories/HGZdSYghuAVlCZwklwUhkCpzyxo.avif';
+import img9 from '../work/stories/IoRvYk4C6QgimqYbHlMXngxoTDQ.avif';
+import img10 from '../work/stories/K2W1frF5P8g0OqNpWOWK5FO4ELM.avif';
+import img11 from '../work/stories/R8BhEoGlenWwQwmluazSAEw.avif';
+import img12 from '../work/stories/TPfkKHrrwsxaLNPxQPDXXsYgk.avif';
+import img13 from '../work/stories/TUiZLdY7QdPZS1qHuvH6P4OLI.avif';
+import img14 from '../work/stories/Ys64ywnWfOlIVtifynidgUSsqQ.avif';
+import img15 from '../work/stories/fgGjveUVU4DYzib9u2Lmn337VQ.avif';
+import img16 from '../work/stories/fhesCHyMYZDq7L5vbazEsPXJhk.avif';
+import img17 from '../work/stories/lL7bKmT9e3xHqr2tzse55ZoBL0.avif';
+import img18 from '../work/stories/leiRs6hOFgnaLyTmvyem3xZ6No.avif';
+
+import img19 from '../work/beforafter/8p63B9X3eCjtnK2BSCMen0ygZqA.avif';
+import img20 from '../work/beforafter/9BBCKXIKuGWFacr9VvWBjMsEI.avif';
+import img21 from '../work/beforafter/9IPZFmXTAtkw3A6Xoa8DC99y4iI.avif';
+import img22 from '../work/beforafter/DBSJY3bWmkAQ9EoAsETI6ZOonE.avif';
+import img23 from '../work/beforafter/EUUrjfLv11cVVSKexFkXQEz8Q.avif';
+import img24 from '../work/beforafter/HGYCiPzqPwyNF0glOiOYRNqCY9g.avif';
+import img25 from '../work/beforafter/HyU82YqpppHy6xaMmxv2jXaRZoY.avif';
+import img26 from '../work/beforafter/NYCAnNhAxqPhVDQ1f33jUqrVDcM.avif';
+import img27 from '../work/beforafter/NdaElBbZmpVTF7cXrrxIXc2XM.avif';
+import img28 from '../work/beforafter/SdnWAdiLk6aTvtq9pPgnXrpks18.avif';
+import img29 from '../work/beforafter/Ucj5RqMxc2ccl2HSeqloiSH1SDk.avif';
+import img30 from '../work/beforafter/XXYGvLdcGfdalRcdtEr5K1X1mA.avif';
+import img31 from '../work/beforafter/Zh2wsqoBpB2CQIxdcrBrDxwAXg.avif';
+import img32 from '../work/beforafter/caChVTJBrVIEKxqZefROmjAa5Uw.avif';
+import img33 from '../work/beforafter/f4HMfC9Oljkn2XenVpv3fbD1kY.avif';
+import img34 from '../work/beforafter/gYxwa49H18nGeGNulUhJ1V6PF4.avif';
+import img35 from '../work/beforafter/gjuBaRRwrSfSqEUI7Jibbbt38M.avif';
+import img36 from '../work/beforafter/ksptfl9iBzo26HYAo4FOQMAI4c.avif';
+import img37 from '../work/beforafter/osI2YTUnVCEgXuhYZVZfwQt9fe0.avif';
+import img38 from '../work/beforafter/psPkMNYW1kUeSJ2ENy9igCxekQ4.avif';
+import img39 from '../work/beforafter/uGz9oFiCM9S8KSIoR5PxO769Fk.avif';
+import img40 from '../work/beforafter/wKEcKtY4u41aZRDYaG3Gm7FlTIU.avif';
+import img41 from '../work/beforafter/zwK5hCzAFOESO0AXPhn9hg0MqnA.avif';
+
+
+
 const PurpleCaseStudies = () => {
   const [activeTab, setActiveTab] = useState('Case Studies');
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +77,7 @@ const PurpleCaseStudies = () => {
       description: "Dr. Livingood went from 378K to 1.4M average views per video while building an automated system that converts followers into leads without any extra work",
       videoUrl: "https://player.vimeo.com/video/1099823690",
       metrics: { followers: "105K", views: "100M+", savings: "$60K/mo" }
-    },    {
+    }, {
       id: 4,
       title: "10K Goal Achieved in Two Months",
       description: "Jay reached his year-long goal of 10k followers in 2 months, then scaled to 64K followers with content that drives actual business leads",
@@ -52,7 +97,7 @@ const PurpleCaseStudies = () => {
       description: "From 38,000 views on her first strategic video to 500,000 views within the week, this business owner proved our content strategies work for any industry",
       videoUrl: "https://player.vimeo.com/video/1099049113",
       metrics: { followers: "105K", views: "100M+", savings: "$60K/mo" }
-    },    {
+    }, {
       id: 7,
       title: "From No Views to 7M+ On Her First Video",
       description: "Amanda's first strategic video generated 7 million total views across platforms, free press coverage, and grew her $35/month Skool community to 4,600 members",
@@ -74,58 +119,12 @@ const PurpleCaseStudies = () => {
       metrics: { followers: "105K", views: "100M+", savings: "$60K/mo" }
     }
   ];
-  
 
-  const successPosts = [
-    {
-      id: 1,
-      author: "Amanda",
-      time: "10:46 AM",
-      content: "And...1Mil views! Wooo!!!! Okay back to my trainings. Thanks for letting me test the scripts. I guess they really work 🤷‍♀️",
-      reactions: { likes: 2, fire: 1, heart: 1, smile: 1, thumbs: 1 },
-      comments: 1
-    },
-    {
-      id: 2,
-      author: "Daniel",
-      time: "10:42 AM",
-      content: "I can't begin to explain how freaking awesome this has been for us! We've been spinning our wheels for the last 18 months trying to get this figured out. And you guys are the first one that's been bringing this to life!",
-      reactions: { likes: 2, fire: 4, heart: 4, smile: 3 }
-    },
-    {
-      id: 3,
-      author: "Ashley",
-      time: "12:19 PM",
-      content: "Wanted to share a win - I know we're at the very beginning stages and still need to learn what the audience responds to, but I've already been averaging a few sales a day with $0 spend on them - pretty neat 😊",
-      reactions: { likes: 6, fire: 9, heart: 6, smile: 2, thumbs: 2 }
-    },
-    {
-      id: 4,
-      author: "Jered",
-      time: "8:09 AM",
-      content: "Organic performance: 116 booked setter calls, 20 Set Sales Calls, 10 Sales",
-      reactions: { likes: 1, fire: 1, heart: 1 }
-    }
-  ];
+  const successPostImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18];
 
-  const successPostImages = [
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1553484771-371a605b060b?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=400&h=300&fit=crop"
-  ];
 
-  const beforeAfterImages = [
-    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1553484771-371a605b060b?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=300&fit=crop"
-  ];
-  
+  const beforeAfterImages = [img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30, img31, img32, img33, img34, img35, img36, img37, img38, img39, img40, img41];
+
   const videoReviews = [
     {
       id: 1,
@@ -137,16 +136,62 @@ const PurpleCaseStudies = () => {
       id: 2,
       title: "Not having to always look for new customers",
       description: "Professional content creation built Amanda's community to 4,600 members with massive press coverage",
-      videoUrl: "https://player.vimeo.com/video/942509042"
+      videoUrl: "https://player.vimeo.com/video/955051627"
     },
     {
       id: 3,
-      title: "Building a Million Dollar Brand",
-      description: "How strategic content marketing transformed a small business into an industry leader with consistent organic growth",
-      videoUrl: "https://player.vimeo.com/video/942509042"
-    }
+      title: "I've already blown past my goals",
+      description: "Top-of-funnel strategies helped Jay's lead generation coaching business scale from under 10k followers to over 65k followers  ",
+      videoUrl: "https://player.vimeo.com/video/955041750"
+    },    {
+      id: 4,
+      title: "This saved my business",
+      description: "Paid ads strategy and content optimization helped Dan's real estate business go from closure to growth through improved video marketing and ad creatives",
+      videoUrl: "https://player.vimeo.com/video/996797297"
+    },
+    {
+      id: 5,
+      title: "From 90 to 300+ leads a week",
+      description: "Marketing automation and conversion optimization turned a beauty business into a viral sensation through strategic customer acquisition",
+      videoUrl: "https://player.vimeo.com/video/1051216753"
+    },
+    {
+      id: 6,
+      title: "More leads than I could handle",
+      description: "Performance marketing and brand building strategies helped Corson scale his funnel optimization through targeted audience engagement",
+      videoUrl: "https://player.vimeo.com/video/1051216882"
+    },    {
+      id: 7,
+      title: "Amazing results with 2hrs a month",
+      description: "Professional content creation and social media management helped Dr. Livingood gain 580K followers and automate lead generation with our viral marketing strategies",
+      videoUrl: "https://player.vimeo.com/video/1090680159"
+    },
+    {
+      id: 8,
+      title: "They've already done the hard work",
+      description: "Ted had been running his business on word-of-mouth referrals. Our content strategy helped him transition from inconsistent referral income to predictable lead generation, building authority in his niche and attracting higher-value clients through organic reach",
+      videoUrl: "https://player.vimeo.com/video/943800753"
+    },
+    {
+      id: 9,
+      title: "Their team is just amazing",
+      description: "Growth marketing and lead generation tactics helped Ashley eliminate unprofitable ad spend while building high-converting sales funnels leading to a 13X ROI performance boost with content",
+      videoUrl: "https://player.vimeo.com/video/1088250563"
+    },    {
+      id: 10,
+      title: "5X'ed my followers, 7M+ Views and tons of inbound leads",
+      description: "Strategic content creation and viral marketing transformed 6 months of struggle into 4.6 million views through proven social media growth techniques",
+      videoUrl: "https://player.vimeo.com/video/1088250344"
+    },
+    {
+      id: 12,
+      title: "This is strategy, not luck",
+      description: "Patrick had spent 10+ years on digital marketing strategies for his home service business when he moved to content marketing which revolutionized how he reached new clients optimizing his home service business growth",
+      videoUrl: "https://player.vimeo.com/video/1090665988"
+    },
+    
   ];
-  
+
 
   const renderContent = () => {
     switch (activeTab) {
@@ -156,9 +201,8 @@ const PurpleCaseStudies = () => {
             {caseStudies.map((study, index) => (
               <div
                 key={study.id}
-                className={`bg-gradient-to-br from-purple-900/20 to-purple-800/10 backdrop-blur-lg rounded-xl p-4 border border-white/30 hover:border-black/60 transition-all duration-500 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-400/20 ${
-                  isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-6'
-                }`}
+                className={`bg-gradient-to-br from-purple-900/20 to-purple-800/10 backdrop-blur-lg rounded-xl p-4 border border-white/30 hover:border-black/60 transition-all duration-500 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-400/20 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-6'
+                  }`}
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
                 <div className="flex flex-col lg:flex-row gap-4 items-start">
@@ -174,7 +218,7 @@ const PurpleCaseStudies = () => {
                       ></iframe>
                     </div>
                   </div>
-      
+
                   {/* Text beside video */}
                   <div className="flex-1 min-w-0">
                     <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-2 leading-snug">
@@ -183,7 +227,7 @@ const PurpleCaseStudies = () => {
                     <p className="text-purple-100/80 text-sm sm:text-base leading-relaxed mb-3">
                       {study.description}
                     </p>
-      
+
                     <div className="flex flex-wrap gap-2">
                       {Object.entries(study.metrics).map(([key, value]) => (
                         <div
@@ -201,64 +245,61 @@ const PurpleCaseStudies = () => {
             ))}
           </div>
         );
-      
-        case 'Success Posts':
-          return (
-            <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
-              {successPostImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`relative group cursor-pointer ${
-                    isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
-                  }`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 backdrop-blur-lg rounded-xl overflow-hidden border-2 border-white/50 hover:border-black/70 transition-all duration-500 hover:scale-[1.05] hover:shadow-xl hover:shadow-purple-500/20 aspect-video">
-                    <img 
-                      src={image} 
-                      alt={`Success Post ${index + 1}`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          );
 
-      case 'Before & After':
+      case 'Success Posts':
         return (
-          <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
-            {beforeAfterImages.map((image, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-2 max-w-2xl mx-auto">
+            {successPostImages.map((image, index) => (
               <div
                 key={index}
-                className={`relative group cursor-pointer ${
-                  isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
-                }`}
+                className={`relative ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
+                  }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 backdrop-blur-lg rounded-xl overflow-hidden border-2 border-white/50 hover:border-black/70 transition-all duration-500 hover:scale-[1.05] hover:shadow-xl hover:shadow-purple-500/20 aspect-video">
-                  <img 
-                    src={image} 
-                    alt={`Before & After ${index + 1}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                <div className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 backdrop-blur-lg rounded-xl overflow-hidden border-2 border-white/50">
+                  <img
+                    src={image}
+                    alt={`Success Post ${index + 1}`}
+                    className="w-full h-auto object-contain"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
             ))}
           </div>
         );
 
-      case 'Video Reviews':
+
+      case 'Before & After':
+        return (
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 sm:gap-2 max-w-xl mx-auto">
+            {beforeAfterImages.map((image, index) => (
+              <div
+                key={index}
+                className={`relative ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
+                  }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 backdrop-blur-lg rounded-xl overflow-hidden border-2 border-white/50">
+                  <img
+                    src={image}
+                    alt={`Before & After ${index + 1}`}
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+      
+      
+        case 'Video Reviews':
         return (
           <div className="space-y-6 lg:space-y-8 max-w-6xl mx-auto">
             {videoReviews.map((review, index) => (
               <div
                 key={review.id}
-                className={`bg-gradient-to-br from-purple-900/40 via-black/30 to-purple-800/40 backdrop-blur-lg rounded-2xl overflow-hidden border-2 border-white/50 hover:border-black/70 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/40 ${
-                  isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
-                }`}
+                className={`bg-gradient-to-br from-purple-900/40 via-black/30 to-purple-800/40 backdrop-blur-lg rounded-2xl overflow-hidden border-2 border-white/50 hover:border-black/70 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/40 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
+                  }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex flex-col lg:flex-row">
@@ -273,7 +314,7 @@ const PurpleCaseStudies = () => {
                       ></iframe>
                     </div>
                   </div>
-                  
+
                   <div className="p-4 sm:p-6 lg:p-8 flex-1 min-w-0">
                     <h3 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-bold text-white mb-2 sm:mb-3 lg:mb-4 leading-tight">"{review.title}"</h3>
                     <p className="text-purple-100/80 text-sm sm:text-base lg:text-lg leading-relaxed">
@@ -321,12 +362,11 @@ const PurpleCaseStudies = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`relative px-2 sm:px-4 lg:px-8 py-2 sm:py-2.5 lg:py-4 rounded-xl sm:rounded-2xl font-semibold transition-all duration-500 text-xs sm:text-sm lg:text-base whitespace-nowrap group overflow-hidden flex-shrink-0 ${
-                    activeTab === tab
-                      ? 'bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 text-white shadow-xl shadow-purple-600/50 scale-105 transform'
-                      : 'text-purple-200 hover:text-white hover:bg-gradient-to-r hover:from-purple-700/50 hover:to-purple-600/50 hover:scale-102'
-                  }`}
-                  style={{ 
+                  className={`relative px-2 sm:px-4 lg:px-8 py-2 sm:py-2.5 lg:py-4 rounded-xl sm:rounded-2xl font-semibold transition-all duration-500 text-xs sm:text-sm lg:text-base whitespace-nowrap group overflow-hidden flex-shrink-0 ${activeTab === tab
+                    ? 'bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 text-white shadow-xl shadow-purple-600/50 scale-105 transform'
+                    : 'text-purple-200 hover:text-white hover:bg-gradient-to-r hover:from-purple-700/50 hover:to-purple-600/50 hover:scale-102'
+                    }`}
+                  style={{
                     animationDelay: `${index * 0.1}s`,
                     transform: activeTab === tab ? 'translateY(-2px)' : 'translateY(0)'
                   }}
@@ -335,7 +375,7 @@ const PurpleCaseStudies = () => {
                   {activeTab === tab && (
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 via-purple-300/30 to-purple-400/20 rounded-xl sm:rounded-2xl blur-sm"></div>
                   )}
-                  
+
                   {/* Tab content */}
                   <span className="relative z-10 flex items-center gap-1 sm:gap-2">
                     {/* Show icons on mobile and desktop */}
@@ -345,7 +385,7 @@ const PurpleCaseStudies = () => {
                       {tab === 'Before & After' && <Eye className="w-3 sm:w-4 h-3 sm:h-4" />}
                       {tab === 'Video Reviews' && <Play className="w-3 sm:w-4 h-3 sm:h-4" />}
                     </span>
-                    
+
                     {/* Shorter text for mobile, full text for desktop */}
                     <span className="sm:hidden">
                       {tab === 'Case Studies' && 'Stories'}
@@ -353,11 +393,11 @@ const PurpleCaseStudies = () => {
                       {tab === 'Before & After' && 'Progress'}
                       {tab === 'Video Reviews' && 'Videos'}
                     </span>
-                    
+
                     {/* Full text for desktop */}
                     <span className="hidden sm:inline">{tab}</span>
                   </span>
-                  
+
                   {/* Hover ripple effect */}
                   <div className="absolute inset-0 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>

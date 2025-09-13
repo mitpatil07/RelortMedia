@@ -8,8 +8,8 @@ const ReviewsComponent = () => {
       name: "Jesse Bruno",
       timeAgo: "19 hours ago",
       rating: 5,
-      title: "Viral Coach knows exactly what they are...",
-      content: "Viral Coach knows exactly what they are doing! I'm in a mortgage broker in australia trying to go viral! And their strategy and plan are brilliant!",
+      title: "Relort Media knows exactly what they are...",
+      content: "Relort Media knows exactly what they are doing! I'm in a mortgage broker in australia trying to go viral! And their strategy and plan are brilliant!",
       hasReply: false
     },
     {
@@ -75,7 +75,7 @@ const ReviewsComponent = () => {
       name: "Kobo Pickleball",
       timeAgo: "5 days ago",
       rating: 5,
-      title: "Viral coach proven system",
+      title: "Relort Media proven system",
       content: "I think viralCoach and their online SKOOL community is the way to go to market your brand without the fear of spending money on paid ads with agencies and not knowing the results. Taking more control of your marketing using their proven systems."
     },
     {
@@ -84,7 +84,7 @@ const ReviewsComponent = () => {
       timeAgo: "September 2",
       rating: 5,
       title: "Amazing resource that helps you hit the ground running.",
-      content: "I am a nurse practitioner with very little time to spare to dedicate to Marketing and creating content. The viral coach Skool community is an amazing free resource. I have already learned more in less than a week and less than two hours invested in consuming the content then I have on many services that I have paid for. I am excited and feel fortunate to be part of this community!"
+      content: "I am a nurse practitioner with very little time to spare to dedicate to Marketing and creating content. The Relort Media Skool community is an amazing free resource. I have already learned more in less than a week and less than two hours invested in consuming the content then I have on many services that I have paid for. I am excited and feel fortunate to be part of this community!"
     },
     {
       id: 11,
@@ -116,7 +116,7 @@ const ReviewsComponent = () => {
       timeAgo: "August 30",
       rating: 5,
       title: "Fun, clear, and motivating training",
-      content: "I've completed two well-known (and expensive) courses in the market, and I can honestly say the quality of Viral Coach's free content is excellent so far. The lessons are clear, practical, and easy to apply—even as I'm still unlocking the free classes. I also really enjoy the gamified community style of Skool—and the fact that Elijah (one of the community managers) reached out to me personally. What could have been a cold, distant experience instead feels friendly and approachable. Skool makes learning engaging and adds a layer of fun accountability. Another excellent choice by the Viral Coach team. I'm excited to keep going and see how much more I can learn here!"
+      content: "I've completed two well-known (and expensive) courses in the market, and I can honestly say the quality of Viral Coach's free content is excellent so far. The lessons are clear, practical, and easy to apply—even as I'm still unlocking the free classes. I also really enjoy the gamified community style of Skool—and the fact that Elijah (one of the community managers) reached out to me personally. What could have been a cold, distant experience instead feels friendly and approachable. Skool makes learning engaging and adds a layer of fun accountability. Another excellent choice by the Relort Media team. I'm excited to keep going and see how much more I can learn here!"
     },
     {
       id: 15,

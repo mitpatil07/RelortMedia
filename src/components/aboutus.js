@@ -94,16 +94,13 @@ const ViralCoachAbout = () => {
                         <div className="w-full lg:w-1/2">
                             <div className="mb-6 sm:mb-8 lg:mb-10">
                                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black leading-[1.1] tracking-tight">
-                                    <span className="block text-purple-400 mb-2 sm:mb-3 font-black">ABOUT VIRAL COACH</span>
+                                    <span className="block text-purple-400 mb-2 sm:mb-3 font-black">ABOUT RELORT MEDIA</span>
                                 </h1>
                             </div>
                             
                             <div className="space-y-4 sm:space-y-5 lg:space-y-6 mb-8 sm:mb-10 lg:mb-12">
                                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white leading-relaxed font-medium text-justify">
-                                    At Viral Coach, we exist to help businesses scale with social media using content systems that drive business results. We give our clients the systems, strategy, and support they need to succeed on social media.
-                                </p>
-                                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed font-normal text-justify">
-                                    Founded by Daniel Iles in 2022, our team has helped generate more than 10 billion organic views and millions in client revenue proving that social media isn't just for influence... it's for growth.
+                                    At Relort Media, we exist to help businesses scale with social media using content systems that drive business results. We give our clients the systems, strategy, and support they need to succeed on social media.
                                 </p>
                             </div>
                             

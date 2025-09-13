@@ -1,6 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, Star, Volume2, Maximize, MoreHorizontal } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 import img1 from '../sliderlogos/1.avif';
 import img2 from '../sliderlogos/2.avif';
@@ -123,24 +124,6 @@ export default function ContentMarketingLanding() {
     video.currentTime = newTime;
   };
 
-  const handleVolumeChange = (e) => {
-    const newVolume = e.target.value / 100;
-    setVolume(newVolume);
-    if (videoRef.current) {
-      videoRef.current.volume = newVolume;
-    }
-  };
-
-  const toggleFullscreen = () => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    if (document.fullscreenElement) {
-      document.exitFullscreen();
-    } else {
-      video.requestFullscreen();
-    }
-  };
 
   return (
     <div className="min-h-screen mt-5 bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-100 relative overflow-hidden"
@@ -255,9 +238,9 @@ export default function ContentMarketingLanding() {
           </div>
 
           {/* CTA Button */}
-          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 sm:py-4 px-8 sm:px-12 rounded-xl text-base sm:text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 relative z-10 mx-4">
+          <Link to="/get-started" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 sm:py-4 px-8 sm:px-12 rounded-xl text-base sm:text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 relative z-10 mx-4">
             GET STARTED
-          </button>
+          </Link>
         </div>
 
         {/* Brands Section */}

@@ -41,7 +41,7 @@ const Footer = () => {
           <div className="flex items-center justify-center group cursor-pointer mb-4 sm:mb-6">
             <Link to="/" className="text-2xl sm:text-3xl lg:text-4xl font-bold">
               <span className="text-white">RELORT</span>
-              <span className="text-orange-500">MEDIA</span>
+              <span className="text-orange-500"> MEDIA</span>
             </Link>
           </div>
 
@@ -136,7 +136,7 @@ const Footer = () => {
                 unique to each individual, including commitment and effort.
                 Testimonial results are meant to demonstrate what the most
                 dedicated students have done and should not be considered average.
-                Viral Coach makes no guarantee of any financial gain from the use
+                Relort Media makes no guarantee of any financial gain from the use
                 of its products.
               </p>
             </div>

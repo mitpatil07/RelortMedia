@@ -1,7 +1,14 @@
 import React from 'react';
 import { Target, TrendingUp, Instagram, Music, Youtube, Sparkles, CheckCircle, Users, Award, Zap, Star } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
-const ViralCoachLanding = () => {
+
+export default function ViralCoachLanding () {
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/get-started');
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-purple-50 pt-16 sm:pt-16 md:pt-20 lg:pt-24 relative overflow-hidden font-sans">
       {/* Floating Background Elements */}
@@ -12,7 +19,7 @@ const ViralCoachLanding = () => {
       <div className="absolute bottom-20 right-1/3 w-10 sm:w-16 md:w-20 h-10 sm:h-16 md:h-20 bg-pink-300 bg-opacity-25 rounded-full blur-xl sm:blur-2xl"></div>
 
       {/* Training Section */}
-      <div className="py-10 sm:py-16 lg:py-20 relative z-10">
+      <div className="py-10 sm:py-16 lg:py-16 relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Content */}
           <div className="text-center mb-10 sm:mb-12 lg:mb-16">
@@ -44,7 +51,7 @@ const ViralCoachLanding = () => {
               {/* Premium Badge */}
               <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-purple-100 bg-opacity-80 text-purple-600 rounded-full text-xs sm:text-sm font-semibold mb-6 sm:mb-8 hover:scale-105 transition-transform duration-300">
                 <Star className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
-                Free Viral Coach Training
+                Free Relort Media Training
                 <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-purple-500 rounded-full ml-2 sm:ml-3 animate-pulse"></div>
               </div>
               
@@ -89,7 +96,7 @@ const ViralCoachLanding = () => {
                     <span className="text-center">Join thousands of entrepreneurs already inside!</span>
                     <span className="w-2 sm:w-3 h-2 sm:h-3 bg-orange-400 rounded-full ml-2 animate-pulse flex-shrink-0"></span>
                   </p>
-                  <button className="bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold py-3 sm:py-4 md:py-5 px-8 sm:px-12 md:px-16 rounded-full text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 hover:-translate-y-1 active:scale-95 group mb-3 sm:mb-4 w-full sm:w-auto">
+                  <button onClick={handleClick} className="bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold py-3 sm:py-4 md:py-5 px-8 sm:px-12 md:px-16 rounded-full text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 hover:-translate-y-1 active:scale-95 group mb-3 sm:mb-4 w-full sm:w-auto">
                     <span className="flex items-center justify-center">
                       JOIN NOW
                       <Sparkles className="w-4 sm:w-5 h-4 sm:h-5 ml-2 group-hover:rotate-180 transition-transform duration-500" />
@@ -99,66 +106,12 @@ const ViralCoachLanding = () => {
                 </div>
               </div>
             </div>
-
-            {/* FAQ Style Cards */}
-            <div className="space-y-3 sm:space-y-4 mx-4 sm:mx-0">
-              {/* What You'll Learn Card */}
-              <div className="bg-white bg-opacity-70 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-white border-opacity-50 hover:shadow-xl transition-all duration-300 group">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center flex-1 min-w-0">
-                    <div className="w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 bg-gradient-to-br from-purple-400 to-purple-500 rounded-full flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      <Award className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 text-white" />
-                    </div>
-                    <h4 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-700 leading-tight">What you'll master inside</h4>
-                  </div>
-                  <div className="text-purple-500 group-hover:rotate-180 transition-transform duration-300 flex-shrink-0 ml-2">
-                    <svg className="w-5 sm:w-6 h-5 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              {/* Why This Works Card */}
-              <div className="bg-white bg-opacity-70 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-white border-opacity-50 hover:shadow-xl transition-all duration-300 group">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center flex-1 min-w-0">
-                    <div className="w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 bg-gradient-to-br from-pink-400 to-pink-500 rounded-full flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      <TrendingUp className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 text-white" />
-                    </div>
-                    <h4 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-700 leading-tight">Why viral content works</h4>
-                  </div>
-                  <div className="text-purple-500 group-hover:rotate-180 transition-transform duration-300 flex-shrink-0 ml-2">
-                    <svg className="w-5 sm:w-6 h-5 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              {/* How to Get Started Card */}
-              <div className="bg-white bg-opacity-70 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-white border-opacity-50 hover:shadow-xl transition-all duration-300 group">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center flex-1 min-w-0">
-                    <div className="w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 bg-gradient-to-br from-orange-400 to-orange-500 rounded-full flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      <Zap className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 text-white" />
-                    </div>
-                    <h4 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-700 leading-tight">How do I know this will work for me?</h4>
-                  </div>
-                  <div className="text-purple-500 group-hover:rotate-180 transition-transform duration-300 flex-shrink-0 ml-2">
-                    <svg className="w-5 sm:w-6 h-5 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
 
       {/* Social Proof Section */}
-      <div className="py-10 sm:py-16 lg:py-20 relative z-10">
+      <div className="mb-16 relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-xs sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto">
             <div className="bg-white bg-opacity-70 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 text-center shadow-xl border border-white border-opacity-50 mx-4 sm:mx-0">
@@ -233,5 +186,3 @@ const ViralCoachLanding = () => {
     </div>
   );
 };
-
-export default ViralCoachLanding;

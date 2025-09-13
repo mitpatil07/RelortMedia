@@ -340,7 +340,6 @@ export default function ContentMarketingLanding() {
         }
       `}</style>
       <VideoCards />
-
       <ImgCards />
       <ReviewsComponent />
     </div>

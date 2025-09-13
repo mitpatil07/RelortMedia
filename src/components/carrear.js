@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, MapPin, Users, TrendingUp, DollarSign, Star, Play, Award, Target, User, Sparkles, Zap, Heart, Globe, ArrowRight, Briefcase, Coffee, Building } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const ViralCoachCareers = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,25 +22,25 @@ const ViralCoachCareers = () => {
     {
       icon: <Globe className="w-6 h-6" />,
       title: "Work From Anywhere",
-      description: "100% remote, outcome-driven culture that values your time, family, and work-life balance above all else.",
+      description: "We're built for freedom, 100% remote, outcome-driven, and fiercely protective of what matters most: your time, your family, your life.",
       color: "from-blue-500 to-indigo-600"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Results-Driven",
-      description: "Fast-paced environment where performance is rewarded and ownership drives meaningful impact.",
+      title: "Built on Results",
+      description: "We move fast, take ownership, and deliver. We reward performance, and we show up sharp to drive impact.",
       color: "from-indigo-500 to-purple-600"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Growth Focused",
-      description: "Continuous learning culture powered by smart tools and high-performance team collaboration.",
+      title: "Obsessed With Growth",
+      description: "Leveling up is non-negotiable. We're a high-performance team powered by smart tools and strong culture.",
       color: "from-purple-500 to-pink-600"
     },
     {
       icon: <DollarSign className="w-6 h-6" />,
-      title: "Competitive Pay",
-      description: "Excellence rewarded with competitive compensation and performance-based bonuses.",
+      title: "Earn What You’re Worth",
+      description: "We reward excellence with competitive pay and performance bonuses, because when you win, we win.",
       color: "from-pink-500 to-rose-600"
     }
   ];
@@ -47,31 +48,27 @@ const ViralCoachCareers = () => {
   const testimonials = [
     {
       rating: 5,
-      quote: "Viral Coach cares more than any other company I've worked for",
+      quote: "Relort Media cares more than any other company I've worked for",
       author: "Team Member",
-      description: "Very positive culture where they invest heavily in employee success. Regular team retreats build strong company culture. They empower you like a business owner without micromanaging.",
-      position: "Senior Developer"
+      description: "In a world where return to office is the norm, Relort Media has made it possible for the entire team to thrive in a remote working environment, with meaningful work and great culture. Hard work will reward you with a team like Relort Media, but so will innovation & attention to detail. This is the place to be whether you're a client working with the team, or a team member working with clients, we have the best clients and team members I've ever had the pleasure of working with!",
     },
     {
       rating: 5,
-      quote: "Stellar Team, Exceptional Experience",
+      quote: "Relort Media is an amazing team to be a part of",
       author: "Team Member",
-      description: "High-performance culture without ego. Data-driven approach focused on quality fulfillment where every team member genuinely cares about client success.",
-      position: "Marketing Manager"
+      description: "The team is successful when you are successful, and every part of the business is built on mutual success. Bring your ideas and your experience, and watch them be turned into income and reputation. From top to bottom, the business runs like a katana in a samurai's hand. Efficient, effective, well-polished, and the history and experience that comes from scaling hundreds of businesses is folded into everything that happens here.",
     },
     {
       rating: 5,
-      quote: "Best kept secret",
+      quote: "High growth environment with smart leadership",
       author: "Team Member",
-      description: "Thriving remote startup environment where client goals and trust are prioritized. This innovative content creation company is the place to be.",
-      position: "Content Strategist"
+      description: "TLeaders in the company are genuinely invested in the success of employee development and provide lots of opportunities to grow quickly. This allowed me to go from one the most entry level positions available to being one of the top producers in the company!",
     },
     {
       rating: 5,
-      quote: "Amazing team to be part of",
+      quote: "Career defining opportunity in a fast-paced environment",
       author: "Team Member",
-      description: "Exceptional support during success periods. Built on shared success principles where the entire business operates like a well-coordinated startup.",
-      position: "Account Manager"
+      description: "Relort Media has created the type of environment where initiative, innovation, and fulfillment are central to what we do. The company has alignment across the board on values, client fulfillment, and prioritizing business performance and employee satisfaction. Remote operations are well-structured, and communication is seamless across departments. Leadership is responsive, forward-thinking, tech-centric, and committed to supporting employee growth and work/life balance",
     }
   ];
 
@@ -98,7 +95,7 @@ const ViralCoachCareers = () => {
   ];
 
   return (
-    <div className="min-h-screen mt-16 sm:mt-10 bg-gradient-to-br from-purple-100 via-pink-50 to-purple-50 relative font-inter antialiased">
+    <div className="min-h-screen mt-20 sm:mt-10 bg-gradient-to-br from-purple-100 via-pink-50 to-purple-50 relative font-inter antialiased">
       {/* Hero Section */}
       <section className="relative py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-pink-50 to-purple-50">
         <div className="max-w-7xl mx-auto">
@@ -107,7 +104,7 @@ const ViralCoachCareers = () => {
             <div className="text-center mb-6 sm:mb-8">
               <div className="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-purple-800 mb-4 sm:mb-6">
                 <Building className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span className="text-xs sm:text-sm font-semibold tracking-wide">VIRAL COACH CAREERS</span>
+                <span className="text-xs sm:text-sm font-semibold tracking-wide">Relort Media CAREERS</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-gray-900 px-2">
@@ -123,16 +120,16 @@ const ViralCoachCareers = () => {
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4">
                 <button className="w-full sm:w-auto group bg-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base hover:bg-purple-700 transition-all duration-300 shadow-lg">
-                  <span className="flex items-center justify-center">
+                  <a href="#job" className="flex items-center justify-center">
                     See Open Positions
                     <ChevronRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
+                  </a>
                 </button>
 
-                <button className="w-full sm:w-auto group flex items-center justify-center space-x-2 text-purple-600 border-2 border-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base hover:bg-purple-50 transition-all duration-300">
+                <Link to="/get-started" className="w-full sm:w-auto group flex items-center justify-center space-x-2 text-purple-600 border-2 border-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base hover:bg-purple-50 transition-all duration-300">
                   <Play className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span>Watch Our Story</span>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -140,8 +137,8 @@ const ViralCoachCareers = () => {
       </section>
 
       {/* About Section */}
-      <section className="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
           <div className="border border-gray-200 bg-gray-50 rounded-xl shadow-sm overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="p-6 sm:p-8 lg:p-12">
@@ -158,7 +155,7 @@ const ViralCoachCareers = () => {
                 </h2>
 
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 text-justify">
-                  Join a remote-first team of bold creators and growth-minded strategists using organic content to drive real traffic for business owners. At Viral Coach, we thrive on innovation, collaboration, and results while empowering every team member to push creative limits and turn views into clients.
+                  Join a remote-first team of bold creators and growth-minded strategists using organic content to drive real traffic for business owners. At Relort Media, we thrive on innovation, collaboration, and results while empowering every team member to push creative limits and turn views into clients.
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
@@ -183,8 +180,8 @@ const ViralCoachCareers = () => {
 
                   <div className="bg-white rounded-xl p-4 sm:p-8 border border-gray-200 shadow-sm">
                     <div className="aspect-video bg-gradient-to-br from-purple-50 to-purple-50 rounded-lg flex items-center justify-center overflow-hidden">
-                      <img 
-                        src='https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&h=400&q=80' 
+                      <img
+                        src='https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&h=400&q=80'
                         alt="Remote work setup"
                         className="w-full h-full object-cover rounded-lg"
                       />
@@ -198,33 +195,38 @@ const ViralCoachCareers = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
+      <section className="relative py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-6 sm:mb-10">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight px-4">
-              Why Choose Viral Coach
+              Why Choose Relort Media
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed px-4 text-justify">
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed px-4 text-justify">
               We're all about high output and high reward. When you join our team, you step into a results-first environment built for ambitious individuals who want to make a real impact.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 sm:gap-4">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="group bg-white border border-gray-200 rounded-xl p-4 sm:p-6 hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                className="group bg-white border border-gray-200 rounded-lg p-4 sm:p-4 hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                 onMouseEnter={() => setActiveCard(index)}
                 onMouseLeave={() => setActiveCard(null)}
               >
-                <div className={`inline-flex p-2 sm:p-3 bg-gradient-to-r ${benefit.color} rounded-lg mb-3 sm:mb-4 text-white transform group-hover:scale-105 transition-all duration-300`}>
-                  {benefit.icon}
+                {/* Centered Icon */}
+                <div className="flex justify-center mb-2 sm:mb-3">
+                  <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 p-2 bg-gradient-to-r ${benefit.color} rounded-lg text-white transform group-hover:scale-105 transition-all duration-300`}>
+                    {benefit.icon}
+                  </div>
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-purple-600 transition-colors duration-300">
+                {/* Centered Title */}
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-300 text-center">
                   {benefit.title}
                 </h3>
 
+                {/* Justified Description */}
                 <p className="text-gray-600 text-xs sm:text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300 text-justify">
                   {benefit.description}
                 </p>
@@ -252,15 +254,7 @@ const ViralCoachCareers = () => {
                 key={index}
                 className="bg-white border border-gray-200 rounded-xl p-4 sm:p-6 hover:shadow-md transition-all duration-300 group"
               >
-                <div className="flex items-center justify-between mb-3 sm:mb-4">
-                  <div className="flex gap-1">
-                    <img 
-                      src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMTAwIDIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMTAgMTVMMTMuMDkgMTEuMjZMMTcgMTJMMTMuMDkgOC43NEwxMCA1TDYuOTEgOC43NEwzIDEyTDYuOTEgMTEuMjZMMTAgMTVaIiBmaWxsPSIjRkZCRjAwIi8+CjxwYXRoIGQ9IjMwIDEwIDMzLjA5IDE2LjI2IDM3IDExIDMzLjA5IDMuNzQgMzAgMCAyNi45MSAzLjc0IDIzIDExIDI2LjkxIDE2LjI2IDMwIDEwWiIgZmlsbD0iI0ZGQkYwMCIvPgo8cGF0aCBkPSI1MCAyMCA1My4wOSAxMS4yNiA1NyAxMiA1My4wOSA4Ljc0IDUwIDUgNDYuOTEgOC43NCA0MyAxMiA0Ni45MSAxMS4yNiA1MCAyMFoiIGZpbGw9IiNGRkJGMDAiLz4KPHA+aWQgZD0iNzAgMTUgNzMuMDkgMTEuMjYgNzcgMTIgNzMuMDkgOC43NCA3MCA1IDY2LjkxIDguNzQgNjMgMTIgNjYuOTEgMTEuMjYgNzAgMTVaIiBmaWxsPSIjRkZCRjAwIi8+CjxwYXRoIGQ9Ik05MCAyMCA5My4wOSAxMS4yNiA5NyAxMiA5My4wOSA4Ljc0IDkwIDUgODYuOTEgOC43NCA4MyAxMiA4Ni45MSAxMS4yNiA5MCAyMFoiIGZpbGw9IiNGRkJGMDAiLz4KPC9zdmc+Cg==' 
-                      className='h-3 sm:h-4 ml-2' 
-                      alt="5 stars"
-                    />
-                  </div>
-                </div>
+
 
                 <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3 leading-relaxed group-hover:text-purple-600 transition-colors duration-300">
                   "{testimonial.quote}"
@@ -276,7 +270,13 @@ const ViralCoachCareers = () => {
                   </div>
                   <div>
                     <p className="text-xs sm:text-sm text-purple-600 font-semibold">{testimonial.author}</p>
-                    <p className="text-xs text-gray-500">{testimonial.position}</p>
+                    <div className="flex items-center justify-between mb-3 sm:mb-4">
+                      <div className="flex">
+                        <div className="flex">
+                          <img src='/stars.avif' className='h-3' />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -286,7 +286,7 @@ const ViralCoachCareers = () => {
       </section>
 
       {/* Job Openings Section */}
-      <section className="relative py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <section id="job" className="relative py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
@@ -321,11 +321,6 @@ const ViralCoachCareers = () => {
                       </div>
                     </div>
                   </div>
-
-                  <button className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-purple-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold text-xs sm:text-sm hover:bg-purple-700 transition-all duration-300">
-                    <span>Learn More</span>
-                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
-                  </button>
                 </div>
               </div>
             ))}
