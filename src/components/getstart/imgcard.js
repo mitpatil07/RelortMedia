@@ -10,6 +10,7 @@ import img7 from '../startassets/FMHVnJ48qacexECMcEWpEWljPw.avif';
 import img8 from '../startassets/ML5qr0Iz7W0CMHQUZUSmPL12U.avif';
 import img9 from '../startassets/TUiZLdY7QdPZS1qHuvH6P4OLI.avif';
 import img10 from '../startassets/YfEPhYr3xiZcvNrqD6Rw1pYW5OM.avif';
+import GetStartedButton from '../items/button';
 
 
 const generatePlaceholder = (clientName, index) => {
@@ -17,7 +18,7 @@ const generatePlaceholder = (clientName, index) => {
     '#8B5CF6', '#A855F7', '#C084FC', '#E879F9', '#F0ABFC',
     '#6366F1', '#8B5CF6', '#A78BFA', '#C4B5FD', '#DDD6FE'
   ];
-  
+
   return `data:image/svg+xml;base64,${btoa(`
     <svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
       <defs>
@@ -37,7 +38,7 @@ const generatePlaceholder = (clientName, index) => {
 
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div 
+    <div
       className="relative bg-gray-900/95 rounded-3xl p-4 sm:p-6 md:p-8 border border-purple-500/40 w-full max-w-xl mx-auto overflow-hidden"
       style={{
         fontFamily: '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
@@ -54,9 +55,9 @@ const TestimonialCard = ({ testimonial }) => {
     >
       {/* Purple glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/15 via-transparent to-purple-600/10 rounded-3xl"></div>
-      
+
       {/* Subtle noise texture overlay */}
-      <div 
+      <div
         className="absolute inset-0 opacity-10 rounded-3xl"
         style={{
           backgroundImage: `
@@ -66,13 +67,13 @@ const TestimonialCard = ({ testimonial }) => {
           backgroundSize: '10px 10px, 20px 20px'
         }}
       ></div>
-      
+
       {/* Purple accent line at top */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-purple-400 to-purple-500 rounded-b-full"></div>
 
       {/* Quote */}
       <div className="mb-6 sm:mb-8 relative z-10">
-        <h3 
+        <h3
           className="text-white font-bold text-center leading-tight px-2 sm:px-4"
           style={{
             fontSize: 'clamp(1.25rem, 4vw, 1.875rem)',
@@ -89,7 +90,7 @@ const TestimonialCard = ({ testimonial }) => {
 
       {/* Full Image Display */}
       <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 bg-gray-900/90 rounded-2xl overflow-hidden shadow-2xl border border-purple-500/30 relative z-10">
-        <img 
+        <img
           src={testimonial.image || generatePlaceholder(testimonial.clientName, testimonial.id)}
           alt={testimonial.clientName}
           className="w-full h-full object-cover"
@@ -103,7 +104,7 @@ const TestimonialCard = ({ testimonial }) => {
 
       {/* Client info */}
       <div className="mt-6 sm:mt-8 text-center relative z-10 px-2">
-        <div 
+        <div
           className="text-white font-bold mb-1"
           style={{
             fontSize: 'clamp(1.25rem, 3.5vw, 1.5rem)',
@@ -113,7 +114,7 @@ const TestimonialCard = ({ testimonial }) => {
         >
           {testimonial.clientName}
         </div>
-        <div 
+        <div
           className="text-purple-300 font-medium"
           style={{
             fontSize: 'clamp(1rem, 3vw, 1.125rem)',
@@ -140,7 +141,7 @@ const TestimonialsGrid = () => {
     {
       id: 2,
       quote: "AMAZING RESULTS WITH VERY LITTLE INPUT FROM ME",
-      clientName: "Sarah Mitchell", 
+      clientName: "Sarah Mitchell",
       business: "Business Coach",
       image: img2,
     },
@@ -161,7 +162,7 @@ const TestimonialsGrid = () => {
     {
       id: 5,
       quote: "BEST INVESTMENT I'VE MADE FOR MY COMPANY",
-      clientName: "David Rodriguez", 
+      clientName: "David Rodriguez",
       business: "Digital Marketing Agency",
       image: img5,
     },
@@ -182,7 +183,7 @@ const TestimonialsGrid = () => {
     {
       id: 8,
       quote: "FINALLY A SYSTEM THAT ACTUALLY WORKS",
-      clientName: "Jennifer Brooks", 
+      clientName: "Jennifer Brooks",
       business: "Fitness Coach",
       image: img8,
     },
@@ -203,7 +204,7 @@ const TestimonialsGrid = () => {
   ];
 
   return (
-    <div 
+    <div
       className="min-h-screen py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8"
       style={{
         fontFamily: '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
@@ -211,7 +212,7 @@ const TestimonialsGrid = () => {
       }}
     >
       {/* Background Pattern */}
-      <div 
+      <div
         className="fixed inset-0 opacity-20"
         style={{
           backgroundImage: `
@@ -221,12 +222,15 @@ const TestimonialsGrid = () => {
           backgroundSize: '800px 800px'
         }}
       ></div>
-      
+
       {/* Content - One card per row with responsive spacing */}
       <div className="relative z-10 w-full max-w-6xl mx-auto space-y-8 sm:space-y-12 md:space-y-16">
         {testimonials.map((testimonial) => (
           <TestimonialCard key={testimonial.id} testimonial={testimonial} />
         ))}
+        <div className="flex justify-center">
+          <GetStartedButton className='' />
+        </div>
       </div>
     </div>
   );

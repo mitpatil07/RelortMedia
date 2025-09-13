@@ -1,4 +1,5 @@
 import React from 'react';
+import GetStartedButton from '../items/button';
 
 const TestimonialCard = ({ testimonial }) => {
   return (
@@ -67,7 +68,7 @@ const TestimonialsGrid = () => {
       quote: "I TURNED OFF $60K/MO IN ADS AND AM WAY MORE PROFITABLE",
       clientName: "Jered Williams",
       business: "Plumbing Coach",
-      vimeoUrl: "https://player.vimeo.com/video/1090680159",
+      vimeoUrl: "https://player.vimeo.com/video/1000555789",
       vimeoId: "1090680159"
     },
     {
@@ -75,64 +76,64 @@ const TestimonialsGrid = () => {
       quote: "AMAZING RESULTS WITH VERY LITTLE INPUT FROM ME",
       clientName: "Sarah Mitchell", 
       business: "Business Coach",
-      vimeoUrl: "https://player.vimeo.com/video/1000555789",
+      vimeoUrl: "https://player.vimeo.com/video/1090680159",
       vimeoId: "1000555789"
     },
     {
       id: 3,
-      quote: "THIS SYSTEM COMPLETELY TRANSFORMED MY BUSINESS",
-      clientName: "Mike Thompson",
-      business: "Construction Company Owner",
-      vimeoUrl: "https://player.vimeo.com/video/1090680159",
-      vimeoId: "1090680159"
+      quote: "WE USED TO HAVE 80-90 LEADS COME IN. LAST WEEK WAS 300.",
+      clientName: "David",
+      business: "Home Builder",
+      vimeoUrl: "https://player.vimeo.com/video/996797297",
+      vimeoId: "996797297"
     },
     {
       id: 4,
-      quote: "I TURNED OFF $60K/MO IN ADS AND AM WAY MORE PROFITABLE",
-      clientName: "Jered Williams",
-      business: "Plumbing Coach",
-      vimeoUrl: "https://player.vimeo.com/video/1090680159",
-      vimeoId: "1090680159"
+      quote: "This has been a game-changer for my business",
+      clientName: "Daniel",
+      business: "Insurance Agency Owner",
+      vimeoUrl: "https://player.vimeo.com/video/1046528375",
+      vimeoId: "1046528375"
     },
     {
       id: 5,
-      quote: "AMAZING RESULTS WITH VERY LITTLE INPUT FROM ME",
-      clientName: "Sarah Mitchell", 
-      business: "Business Coach",
-      vimeoUrl: "https://player.vimeo.com/video/1000555789",
-      vimeoId: "1000555789"
+      quote: "Their team is just amazing",
+      clientName: "Ashley", 
+      business: "Music Coach",
+      vimeoUrl: "https://player.vimeo.com/video/1088250563",
+      vimeoId: "1088250563"
     },
     {
       id: 6,
-      quote: "THIS SYSTEM COMPLETELY TRANSFORMED MY BUSINESS",
-      clientName: "Mike Thompson",
-      business: "Construction Company Owner",
-      vimeoUrl: "https://player.vimeo.com/video/1090680159",
-      vimeoId: "1090680159"
+      quote: "I've already blown past my social media goals",
+      clientName: "Jay",
+      business: "Lead Generation Expert",
+      vimeoUrl: "https://player.vimeo.com/video/955041750",
+      vimeoId: "955041750"
     },
     {
       id: 7,
-      quote: "I TURNED OFF $60K/MO IN ADS AND AM WAY MORE PROFITABLE",
-      clientName: "Jered Williams",
-      business: "Plumbing Coach",
-      vimeoUrl: "https://player.vimeo.com/video/1090680159",
-      vimeoId: "1090680159"
+      quote: "I' ve 5x ed my followers, Gotten 7M+ views, and had tons of people reach out to work with me",
+      clientName: "Dr. Richard",
+      business: "Mindfulness Coach",
+      vimeoUrl: "https://player.vimeo.com/video/1088250344",
+      vimeoId: "1088250344"
     },
     {
       id: 8,
-      quote: "AMAZING RESULTS WITH VERY LITTLE INPUT FROM ME",
-      clientName: "Sarah Mitchell", 
-      business: "Business Coach",
-      vimeoUrl: "https://player.vimeo.com/video/1000555789",
-      vimeoId: "1000555789"
+      quote: "It's rare to find a program that actually gets results",
+      clientName: "Joe", 
+      business: "Forex Trader",
+      vimeoUrl: "https://player.vimeo.com/video/951707794",
+      vimeoId: "951707794"
     },
     {
       id: 9,
-      quote: "THIS SYSTEM COMPLETELY TRANSFORMED MY BUSINESS",
-      clientName: "Mike Thompson",
-      business: "Construction Company Owner",
-      vimeoUrl: "https://player.vimeo.com/video/1090680159",
-      vimeoId: "1090680159"
+      quote: "I Didn't waste any time trying to figure it out. They've already done the hard work.",
+      clientName: "Ted",
+      business: "Vocal Fitness Coach",
+      vimeoUrl: "https://player.vimeo.com/video/943800753",
+      vimeoId: "943800753"
     }
   ];
 
@@ -208,6 +209,9 @@ const TestimonialsGrid = () => {
           background: rgba(147, 51, 234, 0.8);
         }
       `}</style>
+        <div className="flex justify-center pt-16">
+          <GetStartedButton  />
+        </div>
     </div>
   );
 };

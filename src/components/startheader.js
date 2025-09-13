@@ -29,6 +29,7 @@ import img23 from '../sliderlogos/venmo.avif';
 import img24 from '../sliderlogos/verizon.avif';
 import img25 from '../sliderlogos/wonderay.avif';
 import ReviewsComponent from './getstart/reviewscard';
+import GetStartedButton from './items/button';
 
 
 export default function ContentMarketingLanding() {
@@ -91,13 +92,16 @@ export default function ContentMarketingLanding() {
   const togglePlay = () => {
     const video = videoRef.current;
     if (!video) return;
-
+  
     if (isPlaying) {
       video.pause();
+      setIsPlaying(false);
     } else {
+      // 🔊 Unmute when user plays manually
+      video.muted = false;
       video.play();
+      setIsPlaying(true);
     }
-    setIsPlaying(!isPlaying);
   };
 
   const formatTime = (time) => {
@@ -131,9 +135,9 @@ export default function ContentMarketingLanding() {
         >
           <defs>
             <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#FFB800" stopOpacity="0.3" />
-              <stop offset="50%" stopColor="#FF8C00" stopOpacity="0.2" />
-              <stop offset="100%" stopColor="#FFB800" stopOpacity="0.1" />
+              <stop offset="0%" stopColor="#9333EA" stopOpacity="0.3" />
+              <stop offset="50%" stopColor="#8B5CF6" stopOpacity="0.2" />
+              <stop offset="100%" stopColor="#A855F7" stopOpacity="0.1" />
             </linearGradient>
           </defs>
           <path
@@ -170,8 +174,8 @@ export default function ContentMarketingLanding() {
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(255, 184, 0, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 184, 0, 0.1) 1px, transparent 1px)
+            linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px)
           `,
           backgroundSize: '50px 50px'
         }}
@@ -184,7 +188,7 @@ export default function ContentMarketingLanding() {
           {/* Brand Logo */}
           <div className="mb-8">
             <h1 className="text-4xl md:text-5xl font-black text-white mb-2">
-              <span className="text-yellow-400">VIRAL</span> COACH
+              <span className="text-purple-400">VIRAL</span> COACH
             </h1>
           </div>
 
@@ -205,12 +209,12 @@ export default function ContentMarketingLanding() {
           {/* Main Headline */}
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight pb-5">
             Get all of your content DONE<br />
-            <span className="text-yellow-400 font-semibold">In just 2 hours a month👇</span>
+            <span className="text-purple-400 font-semibold">In just 2 hours a month👇</span>
           </h2>
 
           {/* Video Testimonial Card */}
           <div className="relative max-w-4xl mx-auto mb-12">
-            <div className="bg-gradient-to-br from-yellow-400 via-orange-400 to-yellow-500 rounded-3xl p-1 shadow-2xl">
+            <div className="bg-gradient-to-br from-purple-400 via-violet-400 to-purple-500 rounded-3xl p-1 shadow-2xl">
               <div className="bg-white rounded-3xl overflow-hidden">
                 {/* Video Content */}
                 <div className="flex items-start ">
@@ -225,6 +229,9 @@ export default function ContentMarketingLanding() {
                         onClick={togglePlay}
                         src="https://res.cloudinary.com/dsugjsdvu/video/upload/v1756854780/Daniel_VSL_Close_Up_Mar_3_2024_ycslmi.mp4"
                         preload="metadata"
+                        autoPlay
+                        muted
+                        playsInline
                       />
 
                       {/* Play Button Overlay */}
@@ -300,10 +307,7 @@ export default function ContentMarketingLanding() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <button className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-black py-4 px-12 rounded-xl text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 uppercase tracking-wide">
-            SEE IF YOU QUALIFY
-          </button>
+          <GetStartedButton />
         </div>
       </div>
 
@@ -340,6 +344,7 @@ export default function ContentMarketingLanding() {
         }
       `}</style>
       <VideoCards />
+      
       <ImgCards />
       <ReviewsComponent />
     </div>
