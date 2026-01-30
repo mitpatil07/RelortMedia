@@ -5,39 +5,84 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Relort Media</title>
+    <meta name="title" content="Relort Media - Digital Solutions | Web Development, Mobile Apps & Digital Marketing" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="We provide comprehensive digital solutions including web development, mobile apps, and digital marketing strategies. Our team specializes in creating custom solutions tailored to your business needs."
     />
+    <meta name="keywords" content="web development, mobile apps, digital marketing, custom software, digital solutions, business technology, app development, website design, SEO, social media marketing" />
+    <meta name="author" content="Relort Media" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.relortmedia.com/" />
+    <meta property="og:title" content="Relort Media - Digital Solutions | Web Development, Mobile Apps & Digital Marketing" />
+    <meta property="og:description" content="We provide comprehensive digital solutions including web development, mobile apps, and digital marketing strategies. Our team specializes in creating custom solutions tailored to your business needs." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:site_name" content="Relort Media" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.relortmedia.com/" />
+    <meta property="twitter:title" content="Relort Media - Digital Solutions | Web Development, Mobile Apps & Digital Marketing" />
+    <meta property="twitter:description" content="We provide comprehensive digital solutions including web development, mobile apps, and digital marketing strategies. Our team specializes in creating custom solutions tailored to your business needs." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/twitter-image.jpg" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.relortmedia.com/" />
+    
+    <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    
+    <!-- Manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    
+    <!-- Preconnect for Performance (Optional - add your commonly used domains) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Relort Media",
+      "url": "https://www.relortmedia.com",
+      "logo": "%PUBLIC_URL%/logo192.png",
+      "description": "We provide comprehensive digital solutions including web development, mobile apps, and digital marketing strategies.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Artist Village",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.facebook.com/relortmedia",
+        "https://www.twitter.com/relortmedia",
+        "https://www.linkedin.com/company/relortmedia",
+        "https://www.instagram.com/relortmedia"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "info@relortmedia.com"
+      }
+    }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
