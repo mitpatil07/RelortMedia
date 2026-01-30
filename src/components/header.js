@@ -179,16 +179,15 @@ export default function ContentMarketingLanding() {
                   <div className="w-full">
                     <div className="relative w-full aspect-video overflow-hidden bg-black group cursor-pointer shadow-2xl border-2 sm:border-4 border-gray-200">
                       {/* Video Placeholder */}
-                     <video
-                      ref={videoRef}
-                      className="w-full h-full object-cover"
-                      onClick={togglePlay}
-                      src="https://drive.google.com/uc?export=download&id=16v4OsEJIb9R1_M9svoFXn8Ug-SJ9FFXs"
-                      preload="metadata"
-                      autoPlay
-                      muted
-                      playsInline
-                      loop
+                      <video
+                        ref={videoRef}
+                        className="w-full h-full object-cover"
+                        onClick={togglePlay}
+                        src="https://drive.google.com/file/d/16v4OsEJIb9R1_M9svoFXn8Ug-SJ9FFXs/view"
+                        preload="metadata"
+                        autoPlay
+                        muted
+                        playsInline
                       />
 
 
