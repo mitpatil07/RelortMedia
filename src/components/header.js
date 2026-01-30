@@ -183,7 +183,7 @@ export default function ContentMarketingLanding() {
                         ref={videoRef}
                         className="w-full h-full object-cover"
                         onClick={togglePlay}
-                        src="https://res.cloudinary.com/dsugjsdvu/video/upload/v1756854780/Daniel_VSL_Close_Up_Mar_3_2024_ycslmi.mp4"
+                        src="https://drive.google.com/file/d/16v4OsEJIb9R1_M9svoFXn8Ug-SJ9FFXs/view"
                         preload="metadata"
                         autoPlay
                         muted
