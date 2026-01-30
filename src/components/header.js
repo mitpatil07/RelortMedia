@@ -1,6 +1,5 @@
-
 import React, { useState, useRef, useEffect } from 'react';
-import { Play, Pause, Star, Volume2, Maximize, MoreHorizontal } from 'lucide-react';
+import { Play, Pause } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 import img1 from '../sliderlogos/1.avif';
@@ -35,8 +34,8 @@ export default function ContentMarketingLanding() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [volume, setVolume] = useState(1);
-  const [showControls, setShowControls] = useState(true);
+  // const [volume, setVolume] = useState(1);
+  // const [showControls, setShowControls] = useState(true);
 
   const brands = [
     { id: 1, image: img1 },
@@ -164,7 +163,8 @@ export default function ContentMarketingLanding() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 relative z-10 animate-fade-in-up px-4" style={{ animationDelay: '0.4s' }}>
             <span className="text-purple-900 font-semibold text-base sm:text-lg">Excellent</span>
             <div className="flex">
-              <img src='/stars.avif' className='h-4' />
+              // <img src='/stars.avif' className='h-4' />
+            <img src='/stars.avif' className='h-4' alt="5 star rating" />
             </div>
             <span className="text-purple-700 font-semibold text-sm sm:text-base">600+ Reviews</span>
           </div>
